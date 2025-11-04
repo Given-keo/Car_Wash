@@ -34,16 +34,20 @@
             packageToolStripMenuItem = new ToolStripMenuItem();
             transactionToolStripMenuItem = new ToolStripMenuItem();
             laporanToolStripMenuItem = new ToolStripMenuItem();
+            homeToolStripMenuItem = new ToolStripMenuItem();
             mainPanel = new Panel();
+            label2 = new Label();
+            pictureBox1 = new PictureBox();
             label1 = new Label();
             menuStrip1.SuspendLayout();
             mainPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // menuStrip1
             // 
             menuStrip1.ImageScalingSize = new Size(24, 24);
-            menuStrip1.Items.AddRange(new ToolStripItem[] { dataMasterToolStripMenuItem, transactionToolStripMenuItem, laporanToolStripMenuItem });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { dataMasterToolStripMenuItem, transactionToolStripMenuItem, laporanToolStripMenuItem, homeToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Size = new Size(957, 33);
@@ -86,26 +90,57 @@
             laporanToolStripMenuItem.Text = "Laporan";
             laporanToolStripMenuItem.Click += laporanToolStripMenuItem_Click;
             // 
+            // homeToolStripMenuItem
+            // 
+            homeToolStripMenuItem.Name = "homeToolStripMenuItem";
+            homeToolStripMenuItem.Size = new Size(77, 29);
+            homeToolStripMenuItem.Text = "Home";
+            homeToolStripMenuItem.Click += homeToolStripMenuItem_Click;
+            // 
             // mainPanel
             // 
             mainPanel.BackColor = SystemColors.Control;
+            mainPanel.Controls.Add(label2);
+            mainPanel.Controls.Add(pictureBox1);
             mainPanel.Controls.Add(label1);
             mainPanel.Dock = DockStyle.Bottom;
             mainPanel.Location = new Point(0, 36);
             mainPanel.Name = "mainPanel";
             mainPanel.Size = new Size(957, 643);
             mainPanel.TabIndex = 1;
+            mainPanel.Paint += mainPanel_Paint;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label2.Location = new Point(197, 81);
+            label2.Name = "label2";
+            label2.Size = new Size(671, 56);
+            label2.TabIndex = 2;
+            label2.Text = "Kelola pelanggan, layanan, dan transaksi Anda dengan mudah.\nJalankan bisnis cuci mobil Anda dengan lancar hanya dengan beberapa klik!";
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = Properties.Resources.logo_car_wash;
+            pictureBox1.Location = new Point(30, 29);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(150, 115);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 1;
+            pictureBox1.TabStop = false;
+            pictureBox1.Click += pictureBox1_Click;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = SystemColors.ActiveCaptionText;
-            label1.Location = new Point(30, 30);
+            label1.Location = new Point(186, 29);
             label1.Name = "label1";
-            label1.Size = new Size(235, 38);
+            label1.Size = new Size(139, 38);
             label1.TabIndex = 0;
-            label1.Text = "Car Wash Admin";
+            label1.Text = "Car Wash";
             // 
             // Form1
             // 
@@ -124,6 +159,7 @@
             menuStrip1.PerformLayout();
             mainPanel.ResumeLayout(false);
             mainPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -138,5 +174,8 @@
         private ToolStripMenuItem laporanToolStripMenuItem;
         private Panel mainPanel;
         private Label label1;
+        private PictureBox pictureBox1;
+        private Label label2;
+        private ToolStripMenuItem homeToolStripMenuItem;
     }
 }

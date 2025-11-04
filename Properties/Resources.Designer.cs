@@ -59,5 +59,15 @@ namespace Car_Wash.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap logo_car_wash {
+            get {
+                object obj = ResourceManager.GetObject("logo_car_wash", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

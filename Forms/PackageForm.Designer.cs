@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             groupBtn = new GroupBox();
-            btnRefresh = new Button();
             btnDelete = new Button();
             btnUpdate = new Button();
             btnAdd = new Button();
@@ -48,7 +47,6 @@
             // groupBtn
             // 
             groupBtn.BackColor = SystemColors.ActiveBorder;
-            groupBtn.Controls.Add(btnRefresh);
             groupBtn.Controls.Add(btnDelete);
             groupBtn.Controls.Add(btnUpdate);
             groupBtn.Controls.Add(btnAdd);
@@ -58,18 +56,6 @@
             groupBtn.TabIndex = 19;
             groupBtn.TabStop = false;
             groupBtn.Text = "Action";
-            // 
-            // btnRefresh
-            // 
-            btnRefresh.BackColor = Color.Tomato;
-            btnRefresh.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnRefresh.ForeColor = SystemColors.Control;
-            btnRefresh.Location = new Point(72, 142);
-            btnRefresh.Name = "btnRefresh";
-            btnRefresh.Size = new Size(112, 34);
-            btnRefresh.TabIndex = 3;
-            btnRefresh.Text = "Refresh";
-            btnRefresh.UseVisualStyleBackColor = false;
             // 
             // btnDelete
             // 
@@ -86,7 +72,7 @@
             // btnUpdate
             // 
             btnUpdate.BackColor = Color.Yellow;
-            btnUpdate.Location = new Point(72, 90);
+            btnUpdate.Location = new Point(72, 116);
             btnUpdate.Name = "btnUpdate";
             btnUpdate.Size = new Size(112, 34);
             btnUpdate.TabIndex = 1;
@@ -130,7 +116,7 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI Symbol", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label5.Location = new Point(243, 60);
+            label5.Location = new Point(257, 54);
             label5.Name = "label5";
             label5.Size = new Size(256, 32);
             label5.TabIndex = 14;
@@ -209,7 +195,6 @@
         private Label label3;
         private Label label2;
         private Label label1;
-        private Button btnRefresh;
         private DataGridView dgvPackages;
     }
 }
