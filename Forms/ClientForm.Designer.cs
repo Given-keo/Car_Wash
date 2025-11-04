@@ -39,7 +39,6 @@
             txtAddress = new TextBox();
             groupBtn = new GroupBox();
             btnDelete = new Button();
-            btnRefresh = new Button();
             btnUpdate = new Button();
             btnAdd = new Button();
             dgvClients = new DataGridView();
@@ -87,7 +86,7 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI Symbol", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label5.Location = new Point(255, 30);
+            label5.Location = new Point(56, 36);
             label5.Name = "label5";
             label5.Size = new Size(230, 32);
             label5.TabIndex = 4;
@@ -126,10 +125,9 @@
             // 
             groupBtn.BackColor = SystemColors.ActiveBorder;
             groupBtn.Controls.Add(btnDelete);
-            groupBtn.Controls.Add(btnRefresh);
             groupBtn.Controls.Add(btnUpdate);
             groupBtn.Controls.Add(btnAdd);
-            groupBtn.Location = new Point(516, 96);
+            groupBtn.Location = new Point(599, 96);
             groupBtn.Name = "groupBtn";
             groupBtn.Size = new Size(252, 264);
             groupBtn.TabIndex = 9;
@@ -141,31 +139,18 @@
             btnDelete.BackColor = Color.Red;
             btnDelete.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnDelete.ForeColor = SystemColors.Control;
-            btnDelete.Location = new Point(72, 193);
+            btnDelete.Location = new Point(72, 188);
             btnDelete.Name = "btnDelete";
             btnDelete.Size = new Size(112, 34);
             btnDelete.TabIndex = 3;
             btnDelete.Text = "Delete";
             btnDelete.UseVisualStyleBackColor = false;
-            // btnDelete.Click += btnDelete_Click_1;
-            // 
-            // btnRefresh
-            // 
-            btnRefresh.BackColor = Color.Coral;
-            btnRefresh.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnRefresh.ForeColor = SystemColors.Control;
-            btnRefresh.Location = new Point(72, 142);
-            btnRefresh.Name = "btnRefresh";
-            btnRefresh.Size = new Size(112, 34);
-            btnRefresh.TabIndex = 2;
-            btnRefresh.Text = "Refresh";
-            btnRefresh.UseVisualStyleBackColor = false;
-            btnRefresh.Click += btnRefresh_Click;
+            btnDelete.Click += btnDelete_Click;
             // 
             // btnUpdate
             // 
             btnUpdate.BackColor = Color.Yellow;
-            btnUpdate.Location = new Point(72, 90);
+            btnUpdate.Location = new Point(72, 111);
             btnUpdate.Name = "btnUpdate";
             btnUpdate.Size = new Size(112, 34);
             btnUpdate.TabIndex = 1;
@@ -188,19 +173,18 @@
             // dgvClients
             // 
             dgvClients.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvClients.Location = new Point(12, 386);
+            dgvClients.Location = new Point(17, 386);
             dgvClients.Name = "dgvClients";
             dgvClients.RowHeadersWidth = 62;
-            dgvClients.Size = new Size(776, 212);
+            dgvClients.Size = new Size(914, 212);
             dgvClients.TabIndex = 10;
-            //dgvClients.CellContentClick += dgvClients_CellContentClick;
+            dgvClients.CellClick += dgvClients_CellClick;
             // 
             // ClientForm
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.Gray;
-            ClientSize = new Size(800, 610);
+            ClientSize = new Size(938, 610);
             Controls.Add(dgvClients);
             Controls.Add(groupBtn);
             Controls.Add(txtAddress);
@@ -233,7 +217,6 @@
         private TextBox txtEmail;
         private TextBox txtAddress;
         private GroupBox groupBtn;
-        private Button btnRefresh;
         private Button btnUpdate;
         private Button btnAdd;
         private Button btnDelete;

@@ -176,7 +176,7 @@
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.Gray;
+            BackColor = SystemColors.Control;
             ClientSize = new Size(800, 649);
             Controls.Add(dgvPackages);
             Controls.Add(groupBtn);

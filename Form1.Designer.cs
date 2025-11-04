@@ -35,7 +35,9 @@
             transactionToolStripMenuItem = new ToolStripMenuItem();
             laporanToolStripMenuItem = new ToolStripMenuItem();
             mainPanel = new Panel();
+            label1 = new Label();
             menuStrip1.SuspendLayout();
+            mainPanel.SuspendLayout();
             SuspendLayout();
             // 
             // menuStrip1
@@ -44,7 +46,7 @@
             menuStrip1.Items.AddRange(new ToolStripItem[] { dataMasterToolStripMenuItem, transactionToolStripMenuItem, laporanToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(800, 33);
+            menuStrip1.Size = new Size(957, 33);
             menuStrip1.TabIndex = 0;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -86,28 +88,42 @@
             // 
             // mainPanel
             // 
-            mainPanel.BackColor = Color.Gray;
+            mainPanel.BackColor = SystemColors.Control;
+            mainPanel.Controls.Add(label1);
             mainPanel.Dock = DockStyle.Bottom;
             mainPanel.Location = new Point(0, 36);
             mainPanel.Name = "mainPanel";
-            mainPanel.Size = new Size(800, 595);
+            mainPanel.Size = new Size(957, 643);
             mainPanel.TabIndex = 1;
-            mainPanel.Paint += panel1_Paint;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.ForeColor = SystemColors.ActiveCaptionText;
+            label1.Location = new Point(30, 30);
+            label1.Name = "label1";
+            label1.Size = new Size(235, 38);
+            label1.TabIndex = 0;
+            label1.Text = "Car Wash Admin";
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 631);
+            ClientSize = new Size(957, 679);
             Controls.Add(mainPanel);
             Controls.Add(menuStrip1);
             IsMdiContainer = true;
             MainMenuStrip = menuStrip1;
             Name = "Form1";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
             Load += Form1_Load;
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
+            mainPanel.ResumeLayout(false);
+            mainPanel.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -121,5 +137,6 @@
         private ToolStripMenuItem transactionToolStripMenuItem;
         private ToolStripMenuItem laporanToolStripMenuItem;
         private Panel mainPanel;
+        private Label label1;
     }
 }

@@ -232,7 +232,7 @@
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.Gray;
+            BackColor = SystemColors.Control;
             ClientSize = new Size(800, 663);
             Controls.Add(cmbPayment);
             Controls.Add(label7);

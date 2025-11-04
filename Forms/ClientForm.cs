@@ -21,18 +21,15 @@ namespace Car_Wash.Forms
             _clientService = new ClientService(db);
         }
 
-        // Saat form pertama kali load
         private async void ClientForm_Load(object sender, EventArgs e)
         {
             await LoadDataAsync();
         }
 
-        // ✅ Load semua data dari database
         private async Task LoadDataAsync()
         {
             var data = await _clientService.GetAllAsync();
 
-            // Tambahkan kolom No secara manual
             var dataWithNumber = data.Select((x, index) => new
             {
                 No = index + 1,
@@ -47,11 +44,9 @@ namespace Car_Wash.Forms
 
             dgvClients.DataSource = dataWithNumber;
 
-            // Sembunyikan kolom ClientId jika tidak mau ditampilkan
             if (dgvClients.Columns.Contains("ClientId"))
                 dgvClients.Columns["ClientId"].Visible = false;
 
-            // Atur lebar kolom
             dgvClients.Columns["No"].Width = 50;
             dgvClients.Columns["Name"].Width = 150;
             dgvClients.Columns["Phone"].Width = 120;
@@ -61,12 +56,18 @@ namespace Car_Wash.Forms
             dgvClients.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
 
-        // ✅ Tambah data baru
         private async void btnAdd_Click(object sender, EventArgs e)
         {
+            // ✅ Validasi input
             if (string.IsNullOrWhiteSpace(txtName.Text))
             {
                 MessageBox.Show("Nama tidak boleh kosong!");
+                return;
+            }
+
+            if (string.IsNullOrWhiteSpace(txtEmail.Text) || !txtEmail.Text.Contains("@"))
+            {
+                MessageBox.Show("Email harus berisi tanda '@'!");
                 return;
             }
 
@@ -85,7 +86,6 @@ namespace Car_Wash.Forms
             ClearInputs();
         }
 
-        // ✅ Update data yang dipilih
         private async void btnUpdate_Click(object sender, EventArgs e)
         {
             if (dgvClients.CurrentRow != null)
@@ -95,6 +95,19 @@ namespace Car_Wash.Forms
 
                 if (client != null)
                 {
+                    // ✅ Validasi input
+                    if (string.IsNullOrWhiteSpace(txtName.Text))
+                    {
+                        MessageBox.Show("Nama tidak boleh kosong!");
+                        return;
+                    }
+
+                    if (string.IsNullOrWhiteSpace(txtEmail.Text) || !txtEmail.Text.Contains("@"))
+                    {
+                        MessageBox.Show("Email harus berisi tanda '@'!");
+                        return;
+                    }
+
                     client.Name = txtName.Text.Trim();
                     client.Phone = txtPhone.Text.Trim();
                     client.Email = txtEmail.Text.Trim();
@@ -117,7 +130,6 @@ namespace Car_Wash.Forms
             }
         }
 
-        // ✅ Hapus data yang dipilih
         private async void btnDelete_Click(object sender, EventArgs e)
         {
             if (dgvClients.CurrentRow != null)
@@ -140,27 +152,25 @@ namespace Car_Wash.Forms
             }
         }
 
-        // ✅ Saat salah satu baris di DataGridView diklik
         private void dgvClients_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0)
+            if (e.RowIndex >= 0 && dgvClients.Rows[e.RowIndex].Cells["ClientId"].Value != null)
             {
                 var row = dgvClients.Rows[e.RowIndex];
-                txtName.Text = row.Cells["Name"].Value?.ToString();
-                txtPhone.Text = row.Cells["Phone"].Value?.ToString();
-                txtEmail.Text = row.Cells["Email"].Value?.ToString();
-                txtAddress.Text = row.Cells["Address"].Value?.ToString();
+
+                txtName.Text = row.Cells["Name"].Value?.ToString() ?? "";
+                txtPhone.Text = row.Cells["Phone"].Value?.ToString() ?? "";
+                txtEmail.Text = row.Cells["Email"].Value?.ToString() ?? "";
+                txtAddress.Text = row.Cells["Address"].Value?.ToString() ?? "";
             }
         }
 
-        // ✅ Tombol Refresh
         private async void btnRefresh_Click(object sender, EventArgs e)
         {
             await LoadDataAsync();
             ClearInputs();
         }
 
-        // ✅ Bersihkan textbox input
         private void ClearInputs()
         {
             txtName.Clear();
