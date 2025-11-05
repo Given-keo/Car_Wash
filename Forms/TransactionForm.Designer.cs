@@ -2,15 +2,8 @@
 {
     partial class TransactionForm
     {
-        /// <summary>
-        /// Required designer variable.
-        /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
-        /// Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -22,248 +15,173 @@
 
         #region Windows Form Designer generated code
 
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
-        /// </summary>
         private void InitializeComponent()
         {
-            groupBtn = new GroupBox();
-            btnDelete = new Button();
-            btnUpdate = new Button();
-            btnAdd = new Button();
-            label5 = new Label();
-            label3 = new Label();
-            label2 = new Label();
-            label1 = new Label();
-            label4 = new Label();
-            cmbClient = new ComboBox();
-            cmbPackage = new ComboBox();
-            dateTimePickerTransaction = new DateTimePicker();
-            dgvTransactions = new DataGridView();
-            label7 = new Label();
-            cmbPayment = new ComboBox();
-            txtPrice = new TextBox();
-            groupBtn.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dgvTransactions).BeginInit();
-            SuspendLayout();
-            // 
-            // groupBtn
-            // 
-            groupBtn.BackColor = SystemColors.ActiveBorder;
-            groupBtn.Controls.Add(btnDelete);
-            groupBtn.Controls.Add(btnUpdate);
-            groupBtn.Controls.Add(btnAdd);
-            groupBtn.Location = new Point(352, 43);
-            groupBtn.Margin = new Padding(2);
-            groupBtn.Name = "groupBtn";
-            groupBtn.Padding = new Padding(2);
-            groupBtn.Size = new Size(187, 165);
-            groupBtn.TabIndex = 27;
-            groupBtn.TabStop = false;
-            groupBtn.Text = "Action";
-            // 
-            // btnDelete
-            // 
-            btnDelete.BackColor = Color.Red;
-            btnDelete.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnDelete.ForeColor = SystemColors.Control;
-            btnDelete.Location = new Point(50, 106);
-            btnDelete.Margin = new Padding(2);
-            btnDelete.Name = "btnDelete";
-            btnDelete.Size = new Size(78, 20);
-            btnDelete.TabIndex = 2;
-            btnDelete.Text = "Delete";
-            btnDelete.UseVisualStyleBackColor = false;
-            btnDelete.Click += btnDelete_Click_1;
-            // 
-            // btnUpdate
-            // 
-            btnUpdate.BackColor = Color.Yellow;
-            btnUpdate.Location = new Point(50, 60);
-            btnUpdate.Margin = new Padding(2);
-            btnUpdate.Name = "btnUpdate";
-            btnUpdate.Size = new Size(78, 20);
-            btnUpdate.TabIndex = 1;
-            btnUpdate.Text = "Update";
-            btnUpdate.UseVisualStyleBackColor = false;
-           // btnUpdate.Click += btnUpdate_Click;
-            // 
-            // btnAdd
-            // 
-            btnAdd.BackColor = SystemColors.ActiveCaptionText;
-            btnAdd.ForeColor = SystemColors.ButtonFace;
-            btnAdd.Location = new Point(50, 23);
-            btnAdd.Margin = new Padding(2);
-            btnAdd.Name = "btnAdd";
-            btnAdd.Size = new Size(78, 20);
-            btnAdd.TabIndex = 0;
-            btnAdd.Text = "Add";
-            btnAdd.UseVisualStyleBackColor = false;
-            btnAdd.Click += btnAdd_Click_1;
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI Symbol", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label5.Location = new Point(234, 14);
-            label5.Margin = new Padding(2, 0, 2, 0);
-            label5.Name = "label5";
-            label5.Size = new Size(101, 21);
-            label5.TabIndex = 23;
-            label5.Text = "Transaction";
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Location = new Point(31, 103);
-            label3.Margin = new Padding(2, 0, 2, 0);
-            label3.Name = "label3";
-            label3.Size = new Size(36, 15);
-            label3.TabIndex = 22;
-            label3.Text = "Price:";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Location = new Point(31, 158);
-            label2.Margin = new Padding(2, 0, 2, 0);
-            label2.Name = "label2";
-            label2.Size = new Size(34, 15);
-            label2.TabIndex = 21;
-            label2.Text = "Date:";
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(31, 76);
-            label1.Margin = new Padding(2, 0, 2, 0);
-            label1.Name = "label1";
-            label1.Size = new Size(54, 15);
-            label1.TabIndex = 20;
-            label1.Text = "Package:";
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Location = new Point(31, 47);
-            label4.Margin = new Padding(2, 0, 2, 0);
-            label4.Name = "label4";
-            label4.Size = new Size(41, 15);
-            label4.TabIndex = 28;
-            label4.Text = "Client:";
+            this.cmbClient = new System.Windows.Forms.ComboBox();
+            this.cmbPackage = new System.Windows.Forms.ComboBox();
+            this.cmbPayment = new System.Windows.Forms.ComboBox();
+            this.txtPrice = new System.Windows.Forms.TextBox();
+            this.dgvTransactions = new System.Windows.Forms.DataGridView();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTransactions)).BeginInit();
+            this.SuspendLayout();
             // 
             // cmbClient
             // 
-            cmbClient.FormattingEnabled = true;
-            cmbClient.Location = new Point(142, 43);
-            cmbClient.Margin = new Padding(2);
-            cmbClient.Name = "cmbClient";
-            cmbClient.Size = new Size(196, 23);
-            cmbClient.TabIndex = 32;
+            this.cmbClient.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbClient.FormattingEnabled = true;
+            this.cmbClient.Location = new System.Drawing.Point(120, 20);
+            this.cmbClient.Name = "cmbClient";
+            this.cmbClient.Size = new System.Drawing.Size(200, 24);
+            this.cmbClient.TabIndex = 0;
             // 
             // cmbPackage
             // 
-            cmbPackage.FormattingEnabled = true;
-            cmbPackage.Location = new Point(142, 72);
-            cmbPackage.Margin = new Padding(2);
-            cmbPackage.Name = "cmbPackage";
-            cmbPackage.Size = new Size(196, 23);
-            cmbPackage.TabIndex = 33;
-            // 
-            // dateTimePickerTransaction
-            // 
-            dateTimePickerTransaction.Location = new Point(142, 158);
-            dateTimePickerTransaction.Margin = new Padding(2);
-            dateTimePickerTransaction.Name = "dateTimePickerTransaction";
-            dateTimePickerTransaction.Size = new Size(196, 23);
-            dateTimePickerTransaction.TabIndex = 34;
-            // 
-            // dgvTransactions
-            // 
-            dgvTransactions.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvTransactions.Location = new Point(8, 221);
-            dgvTransactions.Margin = new Padding(2);
-            dgvTransactions.Name = "dgvTransactions";
-            dgvTransactions.RowHeadersWidth = 62;
-            dgvTransactions.Size = new Size(543, 122);
-            dgvTransactions.TabIndex = 35;
-            // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.Location = new Point(32, 130);
-            label7.Margin = new Padding(2, 0, 2, 0);
-            label7.Name = "label7";
-            label7.Size = new Size(102, 15);
-            label7.TabIndex = 36;
-            label7.Text = "Payment Method:";
+            this.cmbPackage.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbPackage.FormattingEnabled = true;
+            this.cmbPackage.Location = new System.Drawing.Point(120, 60);
+            this.cmbPackage.Name = "cmbPackage";
+            this.cmbPackage.Size = new System.Drawing.Size(200, 24);
+            this.cmbPackage.TabIndex = 1;
             // 
             // cmbPayment
             // 
-            cmbPayment.FormattingEnabled = true;
-            cmbPayment.Location = new Point(142, 128);
-            cmbPayment.Margin = new Padding(2);
-            cmbPayment.Name = "cmbPayment";
-            cmbPayment.Size = new Size(196, 23);
-            cmbPayment.TabIndex = 37;
+            this.cmbPayment.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbPayment.FormattingEnabled = true;
+            this.cmbPayment.Location = new System.Drawing.Point(120, 100);
+            this.cmbPayment.Name = "cmbPayment";
+            this.cmbPayment.Size = new System.Drawing.Size(200, 24);
+            this.cmbPayment.TabIndex = 2;
             // 
             // txtPrice
             // 
-            txtPrice.Location = new Point(142, 100);
-            txtPrice.Name = "txtPrice";
-            txtPrice.Size = new Size(196, 23);
-            txtPrice.TabIndex = 38;
+            this.txtPrice.Location = new System.Drawing.Point(120, 140);
+            this.txtPrice.Name = "txtPrice";
+            this.txtPrice.ReadOnly = true;
+            this.txtPrice.Size = new System.Drawing.Size(200, 22);
+            this.txtPrice.TabIndex = 3;
+            // 
+            // dgvTransactions
+            // 
+            this.dgvTransactions.AllowUserToAddRows = false;
+            this.dgvTransactions.AllowUserToDeleteRows = false;
+            this.dgvTransactions.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvTransactions.Location = new System.Drawing.Point(20, 200);
+            this.dgvTransactions.Name = "dgvTransactions";
+            this.dgvTransactions.ReadOnly = true;
+            this.dgvTransactions.RowHeadersWidth = 51;
+            this.dgvTransactions.RowTemplate.Height = 24;
+            this.dgvTransactions.Size = new System.Drawing.Size(600, 250);
+            this.dgvTransactions.TabIndex = 4;
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.Location = new System.Drawing.Point(350, 20);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(100, 30);
+            this.btnAdd.TabIndex = 5;
+            this.btnAdd.Text = "Add";
+            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.Location = new System.Drawing.Point(350, 60);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(100, 30);
+            this.btnUpdate.TabIndex = 6;
+            this.btnUpdate.Text = "Update";
+            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.Location = new System.Drawing.Point(350, 100);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(100, 30);
+            this.btnDelete.TabIndex = 7;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // label1 - Client
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(20, 23);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(44, 16);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "Client";
+            // 
+            // label2 - Package
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(20, 63);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(60, 16);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "Package";
+            // 
+            // label3 - Payment
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(20, 103);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(58, 16);
+            this.label3.TabIndex = 10;
+            this.label3.Text = "Payment";
+            // 
+            // label4 - Price
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(20, 143);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(38, 16);
+            this.label4.TabIndex = 11;
+            this.label4.Text = "Price";
             // 
             // TransactionForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            BackColor = SystemColors.Control;
-            ClientSize = new Size(560, 398);
-            Controls.Add(txtPrice);
-            Controls.Add(cmbPayment);
-            Controls.Add(label7);
-            Controls.Add(dgvTransactions);
-            Controls.Add(dateTimePickerTransaction);
-            Controls.Add(cmbPackage);
-            Controls.Add(cmbClient);
-            Controls.Add(label4);
-            Controls.Add(groupBtn);
-            Controls.Add(label5);
-            Controls.Add(label3);
-            Controls.Add(label2);
-            Controls.Add(label1);
-            Margin = new Padding(2);
-            Name = "TransactionForm";
-            Text = "TransactionForm";
-            Load += TransactionForm_Load;
-            groupBtn.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dgvTransactions).EndInit();
-            ResumeLayout(false);
-            PerformLayout();
+            this.ClientSize = new System.Drawing.Size(650, 480);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.btnDelete);
+            this.Controls.Add(this.btnUpdate);
+            this.Controls.Add(this.btnAdd);
+            this.Controls.Add(this.dgvTransactions);
+            this.Controls.Add(this.txtPrice);
+            this.Controls.Add(this.cmbPayment);
+            this.Controls.Add(this.cmbPackage);
+            this.Controls.Add(this.cmbClient);
+            this.Name = "TransactionForm";
+            this.Text = "Transaction Form";
+            this.Load += new System.EventHandler(this.TransactionForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTransactions)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
         }
 
         #endregion
 
-        private GroupBox groupBtn;
-        private Button btnDelete;
-        private Button btnUpdate;
-        private Button btnAdd;
-        private TextBox txtDescription;
-        private TextBox txtPackageName;
-        private Label label5;
-        private Label label3;
-        private Label label2;
-        private Label label1;
-        private TextBox textBox1;
-        private Label label4;
-        private ComboBox cmbClient;
-        private ComboBox cmbPackage;
-        private DateTimePicker dateTimePickerTransaction;
-        private DataGridView dgvTransactions;
-        private Label label7;
-        private ComboBox cmbPayment;
-        private TextBox txtPrice;
+        private System.Windows.Forms.ComboBox cmbClient;
+        private System.Windows.Forms.ComboBox cmbPackage;
+        private System.Windows.Forms.ComboBox cmbPayment;
+        private System.Windows.Forms.TextBox txtPrice;
+        private System.Windows.Forms.DataGridView dgvTransactions;
+        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Button btnUpdate;
+        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
     }
 }
