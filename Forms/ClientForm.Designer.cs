@@ -2,204 +2,209 @@
 {
     partial class ClientForm
     {
-        /// <summary>
-        /// Required designer variable.
-        /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
-        /// Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
-            {
                 components.Dispose();
-            }
             base.Dispose(disposing);
         }
 
         #region Windows Form Designer generated code
 
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
-        /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
-            label2 = new Label();
-            label3 = new Label();
-            label4 = new Label();
-            label5 = new Label();
+            labelTitle = new Label();
+            labelName = new Label();
             txtName = new TextBox();
+            labelPhone = new Label();
             txtPhone = new TextBox();
+            labelEmail = new Label();
             txtEmail = new TextBox();
+            labelAddress = new Label();
             txtAddress = new TextBox();
-            groupBtn = new GroupBox();
-            btnDelete = new Button();
-            btnUpdate = new Button();
             btnAdd = new Button();
+            btnUpdate = new Button();
+            btnDelete = new Button();
             dgvClients = new DataGridView();
-            groupBtn.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvClients).BeginInit();
             SuspendLayout();
             // 
-            // label1
+            // labelTitle
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(56, 102);
-            label1.Name = "label1";
-            label1.Size = new Size(63, 25);
-            label1.TabIndex = 0;
-            label1.Text = "Name:";
+            labelTitle.AutoSize = true;
+            labelTitle.Font = new Font("Segoe UI", 16F, FontStyle.Bold);
+            labelTitle.ForeColor = Color.FromArgb(30, 60, 114);
+            labelTitle.Location = new Point(26, 19);
+            labelTitle.Name = "labelTitle";
+            labelTitle.Size = new Size(207, 30);
+            labelTitle.TabIndex = 0;
+            labelTitle.Text = "Master Data Client";
             // 
-            // label2
+            // labelName
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(56, 212);
-            label2.Name = "label2";
-            label2.Size = new Size(58, 25);
-            label2.TabIndex = 1;
-            label2.Text = "Email:";
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Location = new Point(56, 157);
-            label3.Name = "label3";
-            label3.Size = new Size(66, 25);
-            label3.TabIndex = 2;
-            label3.Text = "Phone:";
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Location = new Point(56, 270);
-            label4.Name = "label4";
-            label4.Size = new Size(81, 25);
-            label4.TabIndex = 3;
-            label4.Text = "Address:";
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI Symbol", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label5.Location = new Point(56, 33);
-            label5.Name = "label5";
-            label5.Size = new Size(230, 32);
-            label5.TabIndex = 4;
-            label5.Text = "Data Master Client";
+            labelName.AutoSize = true;
+            labelName.Font = new Font("Segoe UI", 10F);
+            labelName.Location = new Point(31, 68);
+            labelName.Name = "labelName";
+            labelName.Size = new Size(48, 19);
+            labelName.TabIndex = 1;
+            labelName.Text = "Nama:";
             // 
             // txtName
             // 
-            txtName.Location = new Point(194, 96);
+            txtName.Font = new Font("Segoe UI", 10F);
+            txtName.Location = new Point(131, 65);
+            txtName.Margin = new Padding(3, 2, 3, 2);
             txtName.Name = "txtName";
-            txtName.Size = new Size(299, 31);
-            txtName.TabIndex = 5;
+            txtName.Size = new Size(263, 25);
+            txtName.TabIndex = 2;
+            // 
+            // labelPhone
+            // 
+            labelPhone.AutoSize = true;
+            labelPhone.Font = new Font("Segoe UI", 10F);
+            labelPhone.Location = new Point(31, 98);
+            labelPhone.Name = "labelPhone";
+            labelPhone.Size = new Size(59, 19);
+            labelPhone.TabIndex = 3;
+            labelPhone.Text = "Telepon:";
             // 
             // txtPhone
             // 
-            txtPhone.Location = new Point(194, 151);
+            txtPhone.Font = new Font("Segoe UI", 10F);
+            txtPhone.Location = new Point(131, 95);
+            txtPhone.Margin = new Padding(3, 2, 3, 2);
             txtPhone.Name = "txtPhone";
-            txtPhone.Size = new Size(299, 31);
-            txtPhone.TabIndex = 6;
+            txtPhone.Size = new Size(263, 25);
+            txtPhone.TabIndex = 4;
+            // 
+            // labelEmail
+            // 
+            labelEmail.AutoSize = true;
+            labelEmail.Font = new Font("Segoe UI", 10F);
+            labelEmail.Location = new Point(31, 128);
+            labelEmail.Name = "labelEmail";
+            labelEmail.Size = new Size(44, 19);
+            labelEmail.TabIndex = 5;
+            labelEmail.Text = "Email:";
             // 
             // txtEmail
             // 
-            txtEmail.Location = new Point(194, 206);
+            txtEmail.Font = new Font("Segoe UI", 10F);
+            txtEmail.Location = new Point(131, 125);
+            txtEmail.Margin = new Padding(3, 2, 3, 2);
             txtEmail.Name = "txtEmail";
-            txtEmail.Size = new Size(299, 31);
-            txtEmail.TabIndex = 7;
+            txtEmail.Size = new Size(263, 25);
+            txtEmail.TabIndex = 6;
+            // 
+            // labelAddress
+            // 
+            labelAddress.AutoSize = true;
+            labelAddress.Font = new Font("Segoe UI", 10F);
+            labelAddress.Location = new Point(31, 158);
+            labelAddress.Name = "labelAddress";
+            labelAddress.Size = new Size(55, 19);
+            labelAddress.TabIndex = 7;
+            labelAddress.Text = "Alamat:";
             // 
             // txtAddress
             // 
-            txtAddress.Location = new Point(194, 264);
+            txtAddress.Font = new Font("Segoe UI", 10F);
+            txtAddress.Location = new Point(131, 155);
+            txtAddress.Margin = new Padding(3, 2, 3, 2);
             txtAddress.Multiline = true;
             txtAddress.Name = "txtAddress";
-            txtAddress.Size = new Size(299, 96);
+            txtAddress.Size = new Size(263, 61);
             txtAddress.TabIndex = 8;
-            // 
-            // groupBtn
-            // 
-            groupBtn.BackColor = SystemColors.ActiveBorder;
-            groupBtn.Controls.Add(btnDelete);
-            groupBtn.Controls.Add(btnUpdate);
-            groupBtn.Controls.Add(btnAdd);
-            groupBtn.Location = new Point(599, 96);
-            groupBtn.Name = "groupBtn";
-            groupBtn.Size = new Size(252, 264);
-            groupBtn.TabIndex = 9;
-            groupBtn.TabStop = false;
-            groupBtn.Text = "Action";
-            // 
-            // btnDelete
-            // 
-            btnDelete.BackColor = Color.Red;
-            btnDelete.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnDelete.ForeColor = SystemColors.Control;
-            btnDelete.Location = new Point(72, 188);
-            btnDelete.Name = "btnDelete";
-            btnDelete.Size = new Size(112, 34);
-            btnDelete.TabIndex = 3;
-            btnDelete.Text = "Delete";
-            btnDelete.UseVisualStyleBackColor = false;
-            btnDelete.Click += btnDelete_Click;
-            // 
-            // btnUpdate
-            // 
-            btnUpdate.BackColor = Color.Yellow;
-            btnUpdate.Location = new Point(72, 111);
-            btnUpdate.Name = "btnUpdate";
-            btnUpdate.Size = new Size(112, 34);
-            btnUpdate.TabIndex = 1;
-            btnUpdate.Text = "Update";
-            btnUpdate.UseVisualStyleBackColor = false;
-            btnUpdate.Click += btnUpdate_Click;
             // 
             // btnAdd
             // 
-            btnAdd.BackColor = SystemColors.ActiveCaptionText;
-            btnAdd.ForeColor = SystemColors.ButtonFace;
-            btnAdd.Location = new Point(72, 39);
+            btnAdd.BackColor = Color.FromArgb(51, 153, 255);
+            btnAdd.FlatStyle = FlatStyle.Flat;
+            btnAdd.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            btnAdd.ForeColor = Color.White;
+            btnAdd.Location = new Point(420, 65);
+            btnAdd.Margin = new Padding(3, 2, 3, 2);
             btnAdd.Name = "btnAdd";
-            btnAdd.Size = new Size(112, 34);
-            btnAdd.TabIndex = 0;
-            btnAdd.Text = "Add";
+            btnAdd.Size = new Size(105, 26);
+            btnAdd.TabIndex = 9;
+            btnAdd.Text = "Tambah";
             btnAdd.UseVisualStyleBackColor = false;
             btnAdd.Click += btnAdd_Click;
             // 
+            // btnUpdate
+            // 
+            btnUpdate.BackColor = Color.FromArgb(255, 204, 0);
+            btnUpdate.FlatStyle = FlatStyle.Flat;
+            btnUpdate.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            btnUpdate.ForeColor = Color.Black;
+            btnUpdate.Location = new Point(420, 103);
+            btnUpdate.Margin = new Padding(3, 2, 3, 2);
+            btnUpdate.Name = "btnUpdate";
+            btnUpdate.Size = new Size(105, 26);
+            btnUpdate.TabIndex = 10;
+            btnUpdate.Text = "Ubah";
+            btnUpdate.UseVisualStyleBackColor = false;
+            btnUpdate.Click += btnUpdate_Click;
+            // 
+            // btnDelete
+            // 
+            btnDelete.BackColor = Color.FromArgb(255, 77, 77);
+            btnDelete.FlatStyle = FlatStyle.Flat;
+            btnDelete.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            btnDelete.ForeColor = Color.White;
+            btnDelete.Location = new Point(420, 140);
+            btnDelete.Margin = new Padding(3, 2, 3, 2);
+            btnDelete.Name = "btnDelete";
+            btnDelete.Size = new Size(105, 26);
+            btnDelete.TabIndex = 11;
+            btnDelete.Text = "Hapus";
+            btnDelete.UseVisualStyleBackColor = false;
+            btnDelete.Click += btnDelete_Click;
+            // 
             // dgvClients
             // 
+            dgvClients.AllowUserToAddRows = false;
+            dgvClients.AllowUserToDeleteRows = false;
+            dgvClients.BackgroundColor = Color.White;
             dgvClients.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvClients.Location = new Point(17, 386);
+            dgvClients.Location = new Point(31, 232);
+            dgvClients.Margin = new Padding(3, 2, 3, 2);
             dgvClients.Name = "dgvClients";
-            dgvClients.RowHeadersWidth = 62;
-            dgvClients.Size = new Size(914, 212);
-            dgvClients.TabIndex = 10;
+            dgvClients.ReadOnly = true;
+            dgvClients.RowHeadersVisible = false;
+            dgvClients.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvClients.Size = new Size(603, 119);
+            dgvClients.TabIndex = 12;
             dgvClients.CellClick += dgvClients_CellClick;
             // 
             // ClientForm
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(938, 610);
-            Controls.Add(dgvClients);
-            Controls.Add(groupBtn);
-            Controls.Add(txtAddress);
-            Controls.Add(txtEmail);
-            Controls.Add(txtPhone);
+            BackColor = Color.WhiteSmoke;
+            ClientSize = new Size(653, 435);
+            Controls.Add(labelTitle);
+            Controls.Add(labelName);
             Controls.Add(txtName);
-            Controls.Add(label5);
-            Controls.Add(label4);
-            Controls.Add(label3);
-            Controls.Add(label2);
-            Controls.Add(label1);
+            Controls.Add(labelPhone);
+            Controls.Add(txtPhone);
+            Controls.Add(labelEmail);
+            Controls.Add(txtEmail);
+            Controls.Add(labelAddress);
+            Controls.Add(txtAddress);
+            Controls.Add(btnAdd);
+            Controls.Add(btnUpdate);
+            Controls.Add(btnDelete);
+            Controls.Add(dgvClients);
+            FormBorderStyle = FormBorderStyle.FixedDialog;
+            Margin = new Padding(3, 2, 3, 2);
             Name = "ClientForm";
-            Text = "ClientForm";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Client Management";
             Load += ClientForm_Load;
-            groupBtn.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dgvClients).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -207,18 +212,17 @@
 
         #endregion
 
-        private Label label1;
-        private Label label2;
-        private Label label3;
-        private Label label4;
-        private Label label5;
+        private Label labelTitle;
+        private Label labelName;
         private TextBox txtName;
+        private Label labelPhone;
         private TextBox txtPhone;
+        private Label labelEmail;
         private TextBox txtEmail;
+        private Label labelAddress;
         private TextBox txtAddress;
-        private GroupBox groupBtn;
-        private Button btnUpdate;
         private Button btnAdd;
+        private Button btnUpdate;
         private Button btnDelete;
         private DataGridView dgvClients;
     }

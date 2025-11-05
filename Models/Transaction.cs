@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Car_Wash.Model
 {
+    [Table("Transactions")]
     public class Transaction
     {
         [Key]
@@ -24,10 +25,10 @@ namespace Car_Wash.Model
         [MaxLength(100)]
         public string? PaymentMethod { get; set; }
 
-        [ForeignKey("ClientId")]
+        [ForeignKey(nameof(ClientId))]
         public virtual Client? Client { get; set; }
 
-        [ForeignKey("PackageId")]
+        [ForeignKey(nameof(PackageId))]
         public virtual Package? Package { get; set; }
     }
 }

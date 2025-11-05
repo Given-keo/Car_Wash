@@ -2,6 +2,7 @@
 using Car_Wash.Model;
 using Car_Wash.Services;
 using System;
+using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -12,6 +13,9 @@ namespace Car_Wash.Forms
         private readonly TransactionService _transactionService;
         private readonly ClientService _clientService;
         private readonly PackageService _packageService;
+
+        private int selectedTransactionId = 0;
+
         public TransactionForm()
         {
             InitializeComponent();
@@ -25,28 +29,192 @@ namespace Car_Wash.Forms
         {
             await LoadDropdownsAsync();
             await LoadDataAsync();
+
+            dgvTransactions.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvTransactions.MultiSelect = false;
+            dgvTransactions.CellClick += dgvTransactions_CellClick;
         }
 
+        // ✅ Load data dropdown client, package, dan metode pembayaran
         private async Task LoadDropdownsAsync()
         {
             var clients = await _clientService.GetAllAsync();
             cmbClient.DataSource = clients;
             cmbClient.DisplayMember = "Name";
             cmbClient.ValueMember = "ClientId";
+            cmbClient.SelectedIndex = -1;
 
             var packages = await _packageService.GetAllAsync();
             cmbPackage.DataSource = packages;
             cmbPackage.DisplayMember = "PackageName";
             cmbPackage.ValueMember = "PackageId";
+            cmbPackage.SelectedIndex = -1;
+
+            cmbPackage.SelectedIndexChanged += cmbPackage_SelectedIndexChanged;
+
+            cmbPayment.Items.Clear();
+            cmbPayment.Items.Add("Cash");
+            cmbPayment.Items.Add("Transfer");
+            cmbPayment.Items.Add("QRIS");
+            cmbPayment.SelectedIndex = -1;
         }
 
+        // ✅ Saat pilih package → ambil harga otomatis
+        private async void cmbPackage_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbPackage.SelectedValue == null || !(cmbPackage.SelectedValue is int))
+            {
+                txtPrice.Text = string.Empty;
+                return;
+            }
+
+            int packageId = (int)cmbPackage.SelectedValue;
+            var package = await _packageService.FindByIdAsync(packageId);
+
+            if (package != null)
+                txtPrice.Text = package.Price.ToString("N0");
+            else
+                txtPrice.Text = string.Empty;
+        }
+
+        // ✅ Load data transaksi ke DataGridView
         private async Task LoadDataAsync()
         {
             var data = await _transactionService.GetAllAsync();
-            dgvTransactions.DataSource = data;
+
+            var list = data.Select((x, i) => new
+            {
+                No = i + 1,
+                x.TransactionId,
+                Client = x.Client?.Name,
+                Package = x.Package?.PackageName,
+                x.PaymentMethod,
+                Price = x.TotalPrice,
+                Date = x.TransactionDate.ToString("dd-MM-yyyy HH:mm")
+            }).ToList();
+
+            dgvTransactions.DataSource = list;
+
+            if (dgvTransactions.Columns.Contains("TransactionId"))
+                dgvTransactions.Columns["TransactionId"].Visible = false;
+
+            dgvTransactions.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
 
-        private async void btnAdd_Click(object sender, EventArgs e)
+        // ✅ Klik baris → isi otomatis ke form
+        private void dgvTransactions_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0 && dgvTransactions.Rows[e.RowIndex].Cells["TransactionId"].Value != null)
+            {
+                var row = dgvTransactions.Rows[e.RowIndex];
+                selectedTransactionId = Convert.ToInt32(row.Cells["TransactionId"].Value);
+
+                cmbClient.Text = row.Cells["Client"].Value?.ToString();
+                cmbPackage.Text = row.Cells["Package"].Value?.ToString();
+                cmbPayment.Text = row.Cells["PaymentMethod"].Value?.ToString();
+                txtPrice.Text = row.Cells["Price"].Value?.ToString();
+            }
+        }
+
+        // ✅ Tambah transaksi
+        //private async void btnAdd_Click(object sender, EventArgs e)
+        //{
+        //    if (cmbClient.SelectedValue == null || cmbPackage.SelectedValue == null)
+        //    {
+        //        MessageBox.Show("Pilih client dan package terlebih dahulu!");
+        //        return;
+        //    }
+
+        //    var selectedPackage = await _packageService.FindByIdAsync((int)cmbPackage.SelectedValue);
+        //    if (selectedPackage == null)
+        //    {
+        //        MessageBox.Show("Package tidak ditemukan!");
+        //        return;
+        //    }
+
+        //    var transaction = new Transaction
+        //    {
+        //        ClientId = (int)cmbClient.SelectedValue,
+        //        PackageId = (int)cmbPackage.SelectedValue,
+        //        PaymentMethod = cmbPayment.Text,
+        //        TotalPrice = selectedPackage.Price,
+        //        TransactionDate = DateTime.Now
+        //    };
+
+        //    await _transactionService.AddAsync(transaction);
+        //    MessageBox.Show("Transaksi berhasil ditambahkan!");
+        //    await LoadDataAsync();
+        //    ClearInputs();
+        //}
+
+        // ✅ Update transaksi
+        //private async void btnUpdate_Click(object sender, EventArgs e)
+        //{
+        //    if (selectedTransactionId == 0)
+        //    {
+        //        MessageBox.Show("Pilih transaksi yang ingin diupdate!");
+        //        return;
+        //    }
+
+        //    var transaction = await _transactionService.FindByIdAsync(selectedTransactionId);
+        //    if (transaction == null)
+        //    {
+        //        MessageBox.Show("Data transaksi tidak ditemukan!");
+        //        return;
+        //    }
+
+        //    if (cmbClient.SelectedValue == null || cmbPackage.SelectedValue == null)
+        //    {
+        //        MessageBox.Show("Pilih client dan package terlebih dahulu!");
+        //        return;
+        //    }
+
+        //    var selectedPackage = await _packageService.FindByIdAsync((int)cmbPackage.SelectedValue);
+
+        //    transaction.ClientId = (int)cmbClient.SelectedValue;
+        //    transaction.PackageId = (int)cmbPackage.SelectedValue;
+        //    transaction.PaymentMethod = cmbPayment.Text;
+        //    transaction.TotalPrice = selectedPackage.Price;
+        //    transaction.TransactionDate = DateTime.Now;
+
+        //    await _transactionService.UpdateAsync(transaction);
+        //    MessageBox.Show("Transaksi berhasil diperbarui!");
+        //    await LoadDataAsync();
+        //    ClearInputs();
+        //}
+
+        // ✅ Hapus transaksi
+        //private async void btnDelete_Click(object sender, EventArgs e)
+        //{
+        //    if (selectedTransactionId == 0)
+        //    {
+        //        MessageBox.Show("Pilih transaksi yang ingin dihapus!");
+        //        return;
+        //    }
+
+        //    var confirm = MessageBox.Show("Apakah yakin ingin menghapus transaksi ini?",
+        //        "Konfirmasi Hapus", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+        //    if (confirm == DialogResult.Yes)
+        //    {
+        //        await _transactionService.DeleteAsync(selectedTransactionId);
+        //        MessageBox.Show("Transaksi berhasil dihapus!");
+        //        await LoadDataAsync();
+        //        ClearInputs();
+        //    }
+        //}
+
+        // ✅ Bersihkan input form
+        private void ClearInputs()
+        {
+            cmbClient.SelectedIndex = -1;
+            cmbPackage.SelectedIndex = -1;
+            cmbPayment.SelectedIndex = -1;
+            txtPrice.Clear();
+            selectedTransactionId = 0;
+        }
+
+        private async void btnAdd_Click_1(object sender, EventArgs e)
         {
             if (cmbClient.SelectedValue == null || cmbPackage.SelectedValue == null)
             {
@@ -76,22 +244,25 @@ namespace Car_Wash.Forms
             ClearInputs();
         }
 
-        private async void btnDelete_Click(object sender, EventArgs e)
+        // tombol deleted
+        private async void btnDelete_Click_1(object sender, EventArgs e)
         {
-            if (dgvTransactions.CurrentRow != null)
+            if (selectedTransactionId == 0)
             {
-                int id = Convert.ToInt32(dgvTransactions.CurrentRow.Cells["TransactionId"].Value);
-                await _transactionService.DeleteAsync(id);
+                MessageBox.Show("Pilih transaksi yang ingin dihapus!");
+                return;
+            }
+
+            var confirm = MessageBox.Show("Apakah yakin ingin menghapus transaksi ini?",
+                "Konfirmasi Hapus", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (confirm == DialogResult.Yes)
+            {
+                await _transactionService.DeleteAsync(selectedTransactionId);
                 MessageBox.Show("Transaksi berhasil dihapus!");
                 await LoadDataAsync();
+                ClearInputs();
             }
-        }
-
-        private void ClearInputs()
-        {
-            cmbClient.SelectedIndex = -1;
-            cmbPackage.SelectedIndex = -1;
-            cmbPayment.SelectedIndex = -1;
         }
     }
 }

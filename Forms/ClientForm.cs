@@ -30,35 +30,26 @@ namespace Car_Wash.Forms
         {
             var data = await _clientService.GetAllAsync();
 
-            var dataWithNumber = data.Select((x, index) => new
-            {
-                No = index + 1,
-                x.ClientId,
-                x.Name,
-                x.Phone,
-                x.Email,
-                x.Address,
-                x.CreatedAt,
-                x.UpdatedAt
-            }).ToList();
-
-            dgvClients.DataSource = dataWithNumber;
+            dgvClients.DataSource = data
+                .Select((x, i) => new
+                {
+                    No = i + 1,
+                    x.ClientId,
+                    x.Name,
+                    x.Phone,
+                    x.Email,
+                    x.Address
+                }).ToList();
 
             if (dgvClients.Columns.Contains("ClientId"))
                 dgvClients.Columns["ClientId"].Visible = false;
 
-            dgvClients.Columns["No"].Width = 50;
-            dgvClients.Columns["Name"].Width = 150;
-            dgvClients.Columns["Phone"].Width = 120;
-            dgvClients.Columns["Email"].Width = 150;
-            dgvClients.Columns["Address"].Width = 200;
-
             dgvClients.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvClients.ScrollBars = ScrollBars.Both;
         }
 
         private async void btnAdd_Click(object sender, EventArgs e)
         {
-            // ✅ Validasi input
             if (string.IsNullOrWhiteSpace(txtName.Text))
             {
                 MessageBox.Show("Nama tidak boleh kosong!");
@@ -67,7 +58,7 @@ namespace Car_Wash.Forms
 
             if (string.IsNullOrWhiteSpace(txtEmail.Text) || !txtEmail.Text.Contains("@"))
             {
-                MessageBox.Show("Email harus berisi tanda '@'!");
+                MessageBox.Show("Email tidak valid!");
                 return;
             }
 
@@ -88,87 +79,59 @@ namespace Car_Wash.Forms
 
         private async void btnUpdate_Click(object sender, EventArgs e)
         {
-            if (dgvClients.CurrentRow != null)
+            if (dgvClients.CurrentRow == null)
             {
-                int id = Convert.ToInt32(dgvClients.CurrentRow.Cells["ClientId"].Value);
-                var client = await _clientService.FindByIdAsync(id);
-
-                if (client != null)
-                {
-                    // ✅ Validasi input
-                    if (string.IsNullOrWhiteSpace(txtName.Text))
-                    {
-                        MessageBox.Show("Nama tidak boleh kosong!");
-                        return;
-                    }
-
-                    if (string.IsNullOrWhiteSpace(txtEmail.Text) || !txtEmail.Text.Contains("@"))
-                    {
-                        MessageBox.Show("Email harus berisi tanda '@'!");
-                        return;
-                    }
-
-                    client.Name = txtName.Text.Trim();
-                    client.Phone = txtPhone.Text.Trim();
-                    client.Email = txtEmail.Text.Trim();
-                    client.Address = txtAddress.Text.Trim();
-                    client.UpdatedAt = DateTime.UtcNow;
-
-                    await _clientService.UpdateAsync(client);
-                    MessageBox.Show("Data berhasil diperbarui!");
-                    await LoadDataAsync();
-                    ClearInputs();
-                }
-                else
-                {
-                    MessageBox.Show("Data tidak ditemukan!");
-                }
+                MessageBox.Show("Pilih data yang akan diubah!");
+                return;
             }
-            else
+
+            int id = Convert.ToInt32(dgvClients.CurrentRow.Cells["ClientId"].Value);
+            var client = await _clientService.FindByIdAsync(id);
+
+            if (client != null)
             {
-                MessageBox.Show("Pilih data terlebih dahulu untuk diperbarui!");
+                client.Name = txtName.Text.Trim();
+                client.Phone = txtPhone.Text.Trim();
+                client.Email = txtEmail.Text.Trim();
+                client.Address = txtAddress.Text.Trim();
+                client.UpdatedAt = DateTime.UtcNow;
+
+                await _clientService.UpdateAsync(client);
+                MessageBox.Show("Data berhasil diperbarui!");
+                await LoadDataAsync();
+                ClearInputs();
             }
         }
 
         private async void btnDelete_Click(object sender, EventArgs e)
         {
-            if (dgvClients.CurrentRow != null)
+            if (dgvClients.CurrentRow == null)
             {
-                int id = Convert.ToInt32(dgvClients.CurrentRow.Cells["ClientId"].Value);
-                var confirm = MessageBox.Show("Apakah kamu yakin ingin menghapus data ini?",
-                    "Konfirmasi Hapus", MessageBoxButtons.YesNo);
-
-                if (confirm == DialogResult.Yes)
-                {
-                    await _clientService.DeleteAsync(id);
-                    MessageBox.Show("Data berhasil dihapus!");
-                    await LoadDataAsync();
-                    ClearInputs();
-                }
+                MessageBox.Show("Pilih data yang akan dihapus!");
+                return;
             }
-            else
+
+            int id = Convert.ToInt32(dgvClients.CurrentRow.Cells["ClientId"].Value);
+            var confirm = MessageBox.Show("Yakin ingin menghapus data ini?", "Konfirmasi", MessageBoxButtons.YesNo);
+            if (confirm == DialogResult.Yes)
             {
-                MessageBox.Show("Pilih data yang ingin dihapus terlebih dahulu!");
+                await _clientService.DeleteAsync(id);
+                MessageBox.Show("Data berhasil dihapus!");
+                await LoadDataAsync();
+                ClearInputs();
             }
         }
 
         private void dgvClients_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0 && dgvClients.Rows[e.RowIndex].Cells["ClientId"].Value != null)
+            if (e.RowIndex >= 0)
             {
                 var row = dgvClients.Rows[e.RowIndex];
-
                 txtName.Text = row.Cells["Name"].Value?.ToString() ?? "";
                 txtPhone.Text = row.Cells["Phone"].Value?.ToString() ?? "";
                 txtEmail.Text = row.Cells["Email"].Value?.ToString() ?? "";
                 txtAddress.Text = row.Cells["Address"].Value?.ToString() ?? "";
             }
-        }
-
-        private async void btnRefresh_Click(object sender, EventArgs e)
-        {
-            await LoadDataAsync();
-            ClearInputs();
         }
 
         private void ClearInputs()

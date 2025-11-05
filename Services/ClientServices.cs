@@ -17,7 +17,7 @@ namespace Car_Wash.Services
             _context = context;
         }
 
-        // ✅ Get All Clients
+  
         public async Task<List<Client>> GetAllAsync()
         {
             return await _context.Clients
@@ -25,7 +25,7 @@ namespace Car_Wash.Services
                 .ToListAsync();
         }
 
-        // ✅ Find Client by ID
+    
         public async Task<Client> FindByIdAsync(int id)
         {
             return await _context.Clients.FindAsync(id);
@@ -46,7 +46,7 @@ namespace Car_Wash.Services
             }
         }
 
-        // ✅ Update Existing Client
+
         public async Task UpdateAsync(Client client)
         {
             try
@@ -61,7 +61,7 @@ namespace Car_Wash.Services
             }
         }
 
-        // ✅ Delete Client by ID
+
         public async Task DeleteAsync(int id)
         {
             try
