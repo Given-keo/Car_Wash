@@ -54,10 +54,7 @@ namespace Car_Wash
             LoadForm(new TransactionForm());
         }
 
-        private void laporanToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            LoadForm(new ReportForm());
-        }
+    
 
 
         private void label1_Click(object sender, EventArgs e)

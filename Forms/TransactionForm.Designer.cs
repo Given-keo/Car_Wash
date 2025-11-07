@@ -72,14 +72,16 @@
             // 
             dgvTransactions.AllowUserToAddRows = false;
             dgvTransactions.AllowUserToDeleteRows = false;
+            dgvTransactions.BackgroundColor = Color.White;
             dgvTransactions.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvTransactions.Location = new Point(31, 326);
+            dgvTransactions.Margin = new Padding(4, 5, 4, 5);
             dgvTransactions.Name = "dgvTransactions";
             dgvTransactions.ReadOnly = true;
             dgvTransactions.RowHeadersWidth = 51;
             dgvTransactions.RowTemplate.Height = 24;
             dgvTransactions.Size = new Size(908, 291);
-            dgvTransactions.TabIndex = 4;
+            dgvTransactions.TabIndex = 10;
             // 
             // btnAdd
             // 
@@ -173,7 +175,7 @@
             // 
             // TransactionForm
             // 
-            ClientSize = new Size(1246, 800);
+            ClientSize = new Size(1246, 661);
             Controls.Add(lblTitle);
             Controls.Add(label1);
             Controls.Add(label2);

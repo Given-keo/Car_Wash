@@ -108,6 +108,7 @@
             // 
             dgvPackages.AllowUserToAddRows = false;
             dgvPackages.AllowUserToDeleteRows = false;
+            dgvPackages.BackgroundColor = Color.White;
             dgvPackages.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvPackages.Location = new Point(30, 383);
             dgvPackages.Margin = new Padding(4, 5, 4, 5);

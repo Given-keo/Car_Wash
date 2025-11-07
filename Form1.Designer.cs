@@ -22,7 +22,6 @@
             clientToolStripMenuItem = new ToolStripMenuItem();
             packageToolStripMenuItem = new ToolStripMenuItem();
             transactionToolStripMenuItem = new ToolStripMenuItem();
-            laporanToolStripMenuItem = new ToolStripMenuItem();
             homeToolStripMenuItem = new ToolStripMenuItem();
             mainPanel = new Panel();
             label2 = new Label();
@@ -38,7 +37,7 @@
             // menuStrip1
             // 
             menuStrip1.ImageScalingSize = new Size(24, 24);
-            menuStrip1.Items.AddRange(new ToolStripItem[] { dataMasterToolStripMenuItem, transactionToolStripMenuItem, laporanToolStripMenuItem, homeToolStripMenuItem });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { dataMasterToolStripMenuItem, transactionToolStripMenuItem, homeToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Size = new Size(957, 33);
@@ -73,13 +72,6 @@
             transactionToolStripMenuItem.Size = new Size(98, 29);
             transactionToolStripMenuItem.Text = "Transaksi";
             transactionToolStripMenuItem.Click += transactionToolStripMenuItem_Click;
-            // 
-            // laporanToolStripMenuItem
-            // 
-            laporanToolStripMenuItem.Name = "laporanToolStripMenuItem";
-            laporanToolStripMenuItem.Size = new Size(92, 29);
-            laporanToolStripMenuItem.Text = "Laporan";
-            laporanToolStripMenuItem.Click += laporanToolStripMenuItem_Click;
             // 
             // homeToolStripMenuItem
             // 
@@ -176,7 +168,6 @@
         private ToolStripMenuItem clientToolStripMenuItem;
         private ToolStripMenuItem packageToolStripMenuItem;
         private ToolStripMenuItem transactionToolStripMenuItem;
-        private ToolStripMenuItem laporanToolStripMenuItem;
         private Panel mainPanel;
         private Label label1;
         private ToolStripMenuItem homeToolStripMenuItem;
