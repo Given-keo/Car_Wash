@@ -23,8 +23,6 @@
             txtPrice = new TextBox();
             dgvTransactions = new DataGridView();
             btnAdd = new Button();
-            btnUpdate = new Button();
-            btnDelete = new Button();
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
@@ -96,31 +94,6 @@
             btnAdd.UseVisualStyleBackColor = false;
             btnAdd.Click += btnAdd_Click;
             // 
-            // btnUpdate
-            // 
-            btnUpdate.BackColor = Color.FromArgb(255, 204, 0);
-            btnUpdate.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnUpdate.Location = new Point(534, 143);
-            btnUpdate.Name = "btnUpdate";
-            btnUpdate.Size = new Size(128, 49);
-            btnUpdate.TabIndex = 12;
-            btnUpdate.Text = "Ubah";
-            btnUpdate.UseVisualStyleBackColor = false;
-            btnUpdate.Click += btnUpdate_Click;
-            // 
-            // btnDelete
-            // 
-            btnDelete.BackColor = Color.FromArgb(255, 77, 77);
-            btnDelete.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnDelete.ForeColor = Color.White;
-            btnDelete.Location = new Point(534, 209);
-            btnDelete.Name = "btnDelete";
-            btnDelete.Size = new Size(128, 49);
-            btnDelete.TabIndex = 12;
-            btnDelete.Text = "Hapus";
-            btnDelete.UseVisualStyleBackColor = false;
-            btnDelete.Click += btnDelete_Click;
-            // 
             // label1
             // 
             label1.AutoSize = true;
@@ -181,8 +154,6 @@
             Controls.Add(label2);
             Controls.Add(label3);
             Controls.Add(label4);
-            Controls.Add(btnDelete);
-            Controls.Add(btnUpdate);
             Controls.Add(btnAdd);
             Controls.Add(dgvTransactions);
             Controls.Add(txtPrice);
@@ -205,8 +176,6 @@
         private System.Windows.Forms.TextBox txtPrice;
         private System.Windows.Forms.DataGridView dgvTransactions;
         private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.Button btnUpdate;
-        private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;

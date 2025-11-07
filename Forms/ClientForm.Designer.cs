@@ -36,9 +36,10 @@
             labelTitle.AutoSize = true;
             labelTitle.Font = new Font("Segoe UI", 16F, FontStyle.Bold);
             labelTitle.ForeColor = Color.FromArgb(30, 60, 114);
-            labelTitle.Location = new Point(26, 19);
+            labelTitle.Location = new Point(37, 32);
+            labelTitle.Margin = new Padding(4, 0, 4, 0);
             labelTitle.Name = "labelTitle";
-            labelTitle.Size = new Size(207, 30);
+            labelTitle.Size = new Size(298, 45);
             labelTitle.TabIndex = 0;
             labelTitle.Text = "Master Data Client";
             // 
@@ -46,77 +47,81 @@
             // 
             labelName.AutoSize = true;
             labelName.Font = new Font("Segoe UI", 10F);
-            labelName.Location = new Point(31, 68);
+            labelName.Location = new Point(44, 113);
+            labelName.Margin = new Padding(4, 0, 4, 0);
             labelName.Name = "labelName";
-            labelName.Size = new Size(48, 19);
+            labelName.Size = new Size(68, 28);
             labelName.TabIndex = 1;
             labelName.Text = "Nama:";
             // 
             // txtName
             // 
             txtName.Font = new Font("Segoe UI", 10F);
-            txtName.Location = new Point(131, 65);
-            txtName.Margin = new Padding(3, 2, 3, 2);
+            txtName.Location = new Point(187, 108);
+            txtName.Margin = new Padding(4, 3, 4, 3);
             txtName.Name = "txtName";
-            txtName.Size = new Size(263, 25);
+            txtName.Size = new Size(374, 34);
             txtName.TabIndex = 2;
             // 
             // labelPhone
             // 
             labelPhone.AutoSize = true;
             labelPhone.Font = new Font("Segoe UI", 10F);
-            labelPhone.Location = new Point(31, 98);
+            labelPhone.Location = new Point(44, 163);
+            labelPhone.Margin = new Padding(4, 0, 4, 0);
             labelPhone.Name = "labelPhone";
-            labelPhone.Size = new Size(59, 19);
+            labelPhone.Size = new Size(84, 28);
             labelPhone.TabIndex = 3;
             labelPhone.Text = "Telepon:";
             // 
             // txtPhone
             // 
             txtPhone.Font = new Font("Segoe UI", 10F);
-            txtPhone.Location = new Point(131, 95);
-            txtPhone.Margin = new Padding(3, 2, 3, 2);
+            txtPhone.Location = new Point(187, 158);
+            txtPhone.Margin = new Padding(4, 3, 4, 3);
             txtPhone.Name = "txtPhone";
-            txtPhone.Size = new Size(263, 25);
+            txtPhone.Size = new Size(374, 34);
             txtPhone.TabIndex = 4;
             // 
             // labelEmail
             // 
             labelEmail.AutoSize = true;
             labelEmail.Font = new Font("Segoe UI", 10F);
-            labelEmail.Location = new Point(31, 128);
+            labelEmail.Location = new Point(44, 213);
+            labelEmail.Margin = new Padding(4, 0, 4, 0);
             labelEmail.Name = "labelEmail";
-            labelEmail.Size = new Size(44, 19);
+            labelEmail.Size = new Size(63, 28);
             labelEmail.TabIndex = 5;
             labelEmail.Text = "Email:";
             // 
             // txtEmail
             // 
             txtEmail.Font = new Font("Segoe UI", 10F);
-            txtEmail.Location = new Point(131, 125);
-            txtEmail.Margin = new Padding(3, 2, 3, 2);
+            txtEmail.Location = new Point(187, 208);
+            txtEmail.Margin = new Padding(4, 3, 4, 3);
             txtEmail.Name = "txtEmail";
-            txtEmail.Size = new Size(263, 25);
+            txtEmail.Size = new Size(374, 34);
             txtEmail.TabIndex = 6;
             // 
             // labelAddress
             // 
             labelAddress.AutoSize = true;
             labelAddress.Font = new Font("Segoe UI", 10F);
-            labelAddress.Location = new Point(31, 158);
+            labelAddress.Location = new Point(44, 263);
+            labelAddress.Margin = new Padding(4, 0, 4, 0);
             labelAddress.Name = "labelAddress";
-            labelAddress.Size = new Size(55, 19);
+            labelAddress.Size = new Size(78, 28);
             labelAddress.TabIndex = 7;
             labelAddress.Text = "Alamat:";
             // 
             // txtAddress
             // 
             txtAddress.Font = new Font("Segoe UI", 10F);
-            txtAddress.Location = new Point(131, 155);
-            txtAddress.Margin = new Padding(3, 2, 3, 2);
+            txtAddress.Location = new Point(187, 258);
+            txtAddress.Margin = new Padding(4, 3, 4, 3);
             txtAddress.Multiline = true;
             txtAddress.Name = "txtAddress";
-            txtAddress.Size = new Size(263, 61);
+            txtAddress.Size = new Size(374, 99);
             txtAddress.TabIndex = 8;
             // 
             // btnAdd
@@ -125,10 +130,10 @@
             btnAdd.FlatStyle = FlatStyle.Flat;
             btnAdd.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             btnAdd.ForeColor = Color.White;
-            btnAdd.Location = new Point(420, 65);
-            btnAdd.Margin = new Padding(3, 2, 3, 2);
+            btnAdd.Location = new Point(600, 108);
+            btnAdd.Margin = new Padding(4, 3, 4, 3);
             btnAdd.Name = "btnAdd";
-            btnAdd.Size = new Size(105, 26);
+            btnAdd.Size = new Size(150, 43);
             btnAdd.TabIndex = 9;
             btnAdd.Text = "Tambah";
             btnAdd.UseVisualStyleBackColor = false;
@@ -140,10 +145,10 @@
             btnUpdate.FlatStyle = FlatStyle.Flat;
             btnUpdate.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             btnUpdate.ForeColor = Color.Black;
-            btnUpdate.Location = new Point(420, 103);
-            btnUpdate.Margin = new Padding(3, 2, 3, 2);
+            btnUpdate.Location = new Point(600, 172);
+            btnUpdate.Margin = new Padding(4, 3, 4, 3);
             btnUpdate.Name = "btnUpdate";
-            btnUpdate.Size = new Size(105, 26);
+            btnUpdate.Size = new Size(150, 43);
             btnUpdate.TabIndex = 10;
             btnUpdate.Text = "Ubah";
             btnUpdate.UseVisualStyleBackColor = false;
@@ -155,10 +160,10 @@
             btnDelete.FlatStyle = FlatStyle.Flat;
             btnDelete.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             btnDelete.ForeColor = Color.White;
-            btnDelete.Location = new Point(420, 140);
-            btnDelete.Margin = new Padding(3, 2, 3, 2);
+            btnDelete.Location = new Point(600, 233);
+            btnDelete.Margin = new Padding(4, 3, 4, 3);
             btnDelete.Name = "btnDelete";
-            btnDelete.Size = new Size(105, 26);
+            btnDelete.Size = new Size(150, 43);
             btnDelete.TabIndex = 11;
             btnDelete.Text = "Hapus";
             btnDelete.UseVisualStyleBackColor = false;
@@ -170,22 +175,24 @@
             dgvClients.AllowUserToDeleteRows = false;
             dgvClients.BackgroundColor = Color.White;
             dgvClients.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvClients.Location = new Point(31, 232);
-            dgvClients.Margin = new Padding(3, 2, 3, 2);
+            dgvClients.Location = new Point(44, 387);
+            dgvClients.Margin = new Padding(4, 3, 4, 3);
             dgvClients.Name = "dgvClients";
             dgvClients.ReadOnly = true;
             dgvClients.RowHeadersVisible = false;
+            dgvClients.RowHeadersWidth = 62;
             dgvClients.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvClients.Size = new Size(603, 119);
+            dgvClients.Size = new Size(861, 198);
             dgvClients.TabIndex = 12;
             dgvClients.CellClick += dgvClients_CellClick;
+            dgvClients.CellContentClick += dgvClients_CellContentClick;
             // 
             // ClientForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.WhiteSmoke;
-            ClientSize = new Size(653, 435);
+            ClientSize = new Size(933, 725);
             Controls.Add(labelTitle);
             Controls.Add(labelName);
             Controls.Add(txtName);
@@ -200,7 +207,7 @@
             Controls.Add(btnDelete);
             Controls.Add(dgvClients);
             FormBorderStyle = FormBorderStyle.FixedDialog;
-            Margin = new Padding(3, 2, 3, 2);
+            Margin = new Padding(4, 3, 4, 3);
             Name = "ClientForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Client Management";

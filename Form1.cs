@@ -15,7 +15,6 @@ namespace Car_Wash
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            // Simpan kontrol default panel utama (Home)
             _homeControls = mainPanel.Controls.Cast<Control>().ToArray();
         }
 
@@ -53,10 +52,6 @@ namespace Car_Wash
         {
             LoadForm(new TransactionForm());
         }
-
-    
-
-
         private void label1_Click(object sender, EventArgs e)
         {
 

@@ -141,5 +141,10 @@ namespace Car_Wash.Forms
             txtEmail.Clear();
             txtAddress.Clear();
         }
+
+        private void dgvClients_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

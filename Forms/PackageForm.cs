@@ -20,7 +20,7 @@ namespace Car_Wash.Forms
             _packageService = new PackageService(db);
         }
 
-        // ✅ Saat form pertama kali dibuka
+     
         private async void PackageForm_Load(object sender, EventArgs e)
         {
             await LoadDataAsync();
@@ -29,7 +29,7 @@ namespace Car_Wash.Forms
             dgvPackages.MultiSelect = false;
         }
 
-        // ✅ Load semua data dari database
+
         private async Task LoadDataAsync()
         {
             var data = await _packageService.GetAllAsync();
@@ -53,7 +53,7 @@ namespace Car_Wash.Forms
             dgvPackages.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
 
-        // ✅ Tambah data baru
+        //  Tambah data baru
         private async void btnAdd_Click_1(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(txtName.Text) || string.IsNullOrWhiteSpace(txtPrice.Text))
@@ -82,7 +82,7 @@ namespace Car_Wash.Forms
             ClearInputs();
         }
 
-        // ✅ Update data
+        //  Update data
         private async void btnUpdate_Click_1(object sender, EventArgs e)
         {
             if (dgvPackages.CurrentRow == null)
@@ -117,7 +117,7 @@ namespace Car_Wash.Forms
             ClearInputs();
         }
 
-        // ✅ Hapus data
+        //  Hapus data
         private async void btnDelete_Click_1(object sender, EventArgs e)
         {
             if (dgvPackages.CurrentRow == null)
@@ -139,7 +139,7 @@ namespace Car_Wash.Forms
             }
         }
 
-        // ✅ Klik baris di DataGridView → isi textbox otomatis
+        //  Klik baris di DataGridView → isi textbox otomatis
         private void dgvPackages_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
@@ -152,7 +152,7 @@ namespace Car_Wash.Forms
             }
         }
 
-        // ✅ Bersihkan input
+        //  Bersihkan input
         private void ClearInputs()
         {
             txtName.Clear();
