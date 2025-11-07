@@ -2,15 +2,8 @@
 {
     partial class TransactionForm
     {
-        /// <summary>
-        /// Required designer variable.
-        /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
-        /// Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -22,237 +15,181 @@
 
         #region Windows Form Designer generated code
 
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
-        /// </summary>
         private void InitializeComponent()
         {
-            groupBtn = new GroupBox();
-            btnRefresh = new Button();
-            btnDelete = new Button();
-            btnUpdate = new Button();
-            btnAdd = new Button();
-            txtPrice = new TextBox();
-            label5 = new Label();
-            label3 = new Label();
-            label2 = new Label();
-            label1 = new Label();
-            label4 = new Label();
-            txtTotal = new TextBox();
-            label6 = new Label();
             cmbClient = new ComboBox();
             cmbPackage = new ComboBox();
-            dateTimePickerTransaction = new DateTimePicker();
-            dgvTransactions = new DataGridView();
-            label7 = new Label();
             cmbPayment = new ComboBox();
-            groupBtn.SuspendLayout();
+            txtPrice = new TextBox();
+            dgvTransactions = new DataGridView();
+            btnAdd = new Button();
+            btnUpdate = new Button();
+            btnDelete = new Button();
+            label1 = new Label();
+            label2 = new Label();
+            label3 = new Label();
+            label4 = new Label();
+            lblTitle = new Label();
             ((System.ComponentModel.ISupportInitialize)dgvTransactions).BeginInit();
             SuspendLayout();
             // 
-            // groupBtn
+            // cmbClient
             // 
-            groupBtn.BackColor = SystemColors.ActiveBorder;
-            groupBtn.Controls.Add(btnRefresh);
-            groupBtn.Controls.Add(btnDelete);
-            groupBtn.Controls.Add(btnUpdate);
-            groupBtn.Controls.Add(btnAdd);
-            groupBtn.Location = new Point(503, 71);
-            groupBtn.Name = "groupBtn";
-            groupBtn.Size = new Size(267, 275);
-            groupBtn.TabIndex = 27;
-            groupBtn.TabStop = false;
-            groupBtn.Text = "Action";
+            cmbClient.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbClient.FormattingEnabled = true;
+            cmbClient.Location = new Point(131, 89);
+            cmbClient.Name = "cmbClient";
+            cmbClient.Size = new Size(372, 33);
+            cmbClient.TabIndex = 0;
             // 
-            // btnRefresh
+            // cmbPackage
             // 
-            btnRefresh.BackColor = Color.Tomato;
-            btnRefresh.ForeColor = SystemColors.ButtonHighlight;
-            btnRefresh.Location = new Point(72, 128);
-            btnRefresh.Name = "btnRefresh";
-            btnRefresh.RightToLeft = RightToLeft.No;
-            btnRefresh.Size = new Size(112, 34);
-            btnRefresh.TabIndex = 3;
-            btnRefresh.Text = "Refresh";
-            btnRefresh.UseVisualStyleBackColor = false;
+            cmbPackage.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbPackage.FormattingEnabled = true;
+            cmbPackage.Location = new Point(131, 143);
+            cmbPackage.Name = "cmbPackage";
+            cmbPackage.Size = new Size(372, 33);
+            cmbPackage.TabIndex = 1;
             // 
-            // btnDelete
+            // cmbPayment
             // 
-            btnDelete.BackColor = Color.Red;
-            btnDelete.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnDelete.ForeColor = SystemColors.Control;
-            btnDelete.Location = new Point(72, 177);
-            btnDelete.Name = "btnDelete";
-            btnDelete.Size = new Size(112, 34);
-            btnDelete.TabIndex = 2;
-            btnDelete.Text = "Delete";
-            btnDelete.UseVisualStyleBackColor = false;
-            // 
-            // btnUpdate
-            // 
-            btnUpdate.BackColor = Color.Yellow;
-            btnUpdate.Location = new Point(72, 79);
-            btnUpdate.Name = "btnUpdate";
-            btnUpdate.Size = new Size(112, 34);
-            btnUpdate.TabIndex = 1;
-            btnUpdate.Text = "Update";
-            btnUpdate.UseVisualStyleBackColor = false;
-            // 
-            // btnAdd
-            // 
-            btnAdd.BackColor = SystemColors.ActiveCaptionText;
-            btnAdd.ForeColor = SystemColors.ButtonFace;
-            btnAdd.Location = new Point(72, 39);
-            btnAdd.Name = "btnAdd";
-            btnAdd.Size = new Size(112, 34);
-            btnAdd.TabIndex = 0;
-            btnAdd.Text = "Add";
-            btnAdd.UseVisualStyleBackColor = false;
+            cmbPayment.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbPayment.FormattingEnabled = true;
+            cmbPayment.Location = new Point(131, 209);
+            cmbPayment.Name = "cmbPayment";
+            cmbPayment.Size = new Size(372, 33);
+            cmbPayment.TabIndex = 2;
             // 
             // txtPrice
             // 
-            txtPrice.Location = new Point(203, 169);
+            txtPrice.Location = new Point(131, 266);
             txtPrice.Name = "txtPrice";
-            txtPrice.Size = new Size(278, 31);
-            txtPrice.TabIndex = 25;
+            txtPrice.ReadOnly = true;
+            txtPrice.Size = new Size(372, 31);
+            txtPrice.TabIndex = 3;
             // 
-            // label5
+            // dgvTransactions
             // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI Symbol", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label5.Location = new Point(334, 23);
-            label5.Name = "label5";
-            label5.Size = new Size(147, 32);
-            label5.TabIndex = 23;
-            label5.Text = "Transaction";
+            dgvTransactions.AllowUserToAddRows = false;
+            dgvTransactions.AllowUserToDeleteRows = false;
+            dgvTransactions.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvTransactions.Location = new Point(31, 326);
+            dgvTransactions.Name = "dgvTransactions";
+            dgvTransactions.ReadOnly = true;
+            dgvTransactions.RowHeadersWidth = 51;
+            dgvTransactions.RowTemplate.Height = 24;
+            dgvTransactions.Size = new Size(908, 291);
+            dgvTransactions.TabIndex = 4;
             // 
-            // label3
+            // btnAdd
             // 
-            label3.AutoSize = true;
-            label3.Location = new Point(44, 172);
-            label3.Name = "label3";
-            label3.Size = new Size(53, 25);
-            label3.TabIndex = 22;
-            label3.Text = "Price:";
+            btnAdd.BackColor = Color.FromArgb(51, 153, 255);
+            btnAdd.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnAdd.ForeColor = Color.White;
+            btnAdd.Location = new Point(534, 80);
+            btnAdd.Name = "btnAdd";
+            btnAdd.Size = new Size(128, 50);
+            btnAdd.TabIndex = 12;
+            btnAdd.Text = "Tambah";
+            btnAdd.UseVisualStyleBackColor = false;
+            btnAdd.Click += btnAdd_Click;
             // 
-            // label2
+            // btnUpdate
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(44, 263);
-            label2.Name = "label2";
-            label2.Size = new Size(53, 25);
-            label2.TabIndex = 21;
-            label2.Text = "Date:";
+            btnUpdate.BackColor = Color.FromArgb(255, 204, 0);
+            btnUpdate.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnUpdate.Location = new Point(534, 143);
+            btnUpdate.Name = "btnUpdate";
+            btnUpdate.Size = new Size(128, 49);
+            btnUpdate.TabIndex = 12;
+            btnUpdate.Text = "Ubah";
+            btnUpdate.UseVisualStyleBackColor = false;
+            btnUpdate.Click += btnUpdate_Click;
+            // 
+            // btnDelete
+            // 
+            btnDelete.BackColor = Color.FromArgb(255, 77, 77);
+            btnDelete.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnDelete.ForeColor = Color.White;
+            btnDelete.Location = new Point(534, 209);
+            btnDelete.Name = "btnDelete";
+            btnDelete.Size = new Size(128, 49);
+            btnDelete.TabIndex = 12;
+            btnDelete.Text = "Hapus";
+            btnDelete.UseVisualStyleBackColor = false;
+            btnDelete.Click += btnDelete_Click;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(44, 126);
+            label1.Font = new Font("Segoe UI", 10F);
+            label1.Location = new Point(31, 89);
             label1.Name = "label1";
-            label1.Size = new Size(80, 25);
-            label1.TabIndex = 20;
-            label1.Text = "Package:";
+            label1.Size = new Size(66, 28);
+            label1.TabIndex = 8;
+            label1.Text = "Client:";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 10F);
+            label2.Location = new Point(31, 148);
+            label2.Name = "label2";
+            label2.Size = new Size(87, 28);
+            label2.TabIndex = 9;
+            label2.Text = "Package:";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 10F);
+            label3.Location = new Point(31, 209);
+            label3.Name = "label3";
+            label3.Size = new Size(91, 28);
+            label3.TabIndex = 10;
+            label3.Text = "Payment:";
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(44, 79);
+            label4.Font = new Font("Segoe UI", 10F);
+            label4.Location = new Point(31, 266);
             label4.Name = "label4";
-            label4.Size = new Size(60, 25);
-            label4.TabIndex = 28;
-            label4.Text = "Client:";
+            label4.Size = new Size(58, 28);
+            label4.TabIndex = 11;
+            label4.Text = "Price:";
             // 
-            // txtTotal
+            // lblTitle
             // 
-            txtTotal.Location = new Point(203, 312);
-            txtTotal.Name = "txtTotal";
-            txtTotal.Size = new Size(278, 31);
-            txtTotal.TabIndex = 31;
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Location = new Point(44, 321);
-            label6.Name = "label6";
-            label6.Size = new Size(53, 25);
-            label6.TabIndex = 30;
-            label6.Text = "Total:";
-            // 
-            // cmbClient
-            // 
-            cmbClient.FormattingEnabled = true;
-            cmbClient.Location = new Point(203, 71);
-            cmbClient.Name = "cmbClient";
-            cmbClient.Size = new Size(278, 33);
-            cmbClient.TabIndex = 32;
-            // 
-            // cmbPackage
-            // 
-            cmbPackage.FormattingEnabled = true;
-            cmbPackage.Location = new Point(203, 120);
-            cmbPackage.Name = "cmbPackage";
-            cmbPackage.Size = new Size(278, 33);
-            cmbPackage.TabIndex = 33;
-            // 
-            // dateTimePickerTransaction
-            // 
-            dateTimePickerTransaction.Location = new Point(203, 263);
-            dateTimePickerTransaction.Name = "dateTimePickerTransaction";
-            dateTimePickerTransaction.Size = new Size(279, 31);
-            dateTimePickerTransaction.TabIndex = 34;
-            // 
-            // dgvTransactions
-            // 
-            dgvTransactions.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvTransactions.Location = new Point(12, 368);
-            dgvTransactions.Name = "dgvTransactions";
-            dgvTransactions.RowHeadersWidth = 62;
-            dgvTransactions.Size = new Size(776, 204);
-            dgvTransactions.TabIndex = 35;
-            // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.Location = new Point(45, 216);
-            label7.Name = "label7";
-            label7.Size = new Size(152, 25);
-            label7.TabIndex = 36;
-            label7.Text = "Payment Method:";
-            // 
-            // cmbPayment
-            // 
-            cmbPayment.FormattingEnabled = true;
-            cmbPayment.Location = new Point(203, 213);
-            cmbPayment.Name = "cmbPayment";
-            cmbPayment.Size = new Size(279, 33);
-            cmbPayment.TabIndex = 37;
+            lblTitle.AutoSize = true;
+            lblTitle.Font = new Font("Segoe UI", 16F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblTitle.ForeColor = Color.FromArgb(30, 60, 114);
+            lblTitle.Location = new Point(31, 22);
+            lblTitle.Margin = new Padding(4, 0, 4, 0);
+            lblTitle.Name = "lblTitle";
+            lblTitle.Size = new Size(167, 45);
+            lblTitle.TabIndex = 12;
+            lblTitle.Text = "Transaksi ";
             // 
             // TransactionForm
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
-            AutoScaleMode = AutoScaleMode.Font;
-            BackColor = SystemColors.Control;
-            ClientSize = new Size(800, 663);
-            Controls.Add(cmbPayment);
-            Controls.Add(label7);
+            ClientSize = new Size(1246, 800);
+            Controls.Add(lblTitle);
+            Controls.Add(label1);
+            Controls.Add(label2);
+            Controls.Add(label3);
+            Controls.Add(label4);
+            Controls.Add(btnDelete);
+            Controls.Add(btnUpdate);
+            Controls.Add(btnAdd);
             Controls.Add(dgvTransactions);
-            Controls.Add(dateTimePickerTransaction);
+            Controls.Add(txtPrice);
+            Controls.Add(cmbPayment);
             Controls.Add(cmbPackage);
             Controls.Add(cmbClient);
-            Controls.Add(txtTotal);
-            Controls.Add(label6);
-            Controls.Add(label4);
-            Controls.Add(groupBtn);
-            Controls.Add(txtPrice);
-            Controls.Add(label5);
-            Controls.Add(label3);
-            Controls.Add(label2);
-            Controls.Add(label1);
             Name = "TransactionForm";
-            Text = "TransactionForm";
+            Text = "Transaction Form";
             Load += TransactionForm_Load;
-            groupBtn.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dgvTransactions).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -260,27 +197,18 @@
 
         #endregion
 
-        private GroupBox groupBtn;
-        private Button btnDelete;
-        private Button btnUpdate;
-        private Button btnAdd;
-        private TextBox txtDescription;
-        private TextBox txtPrice;
-        private TextBox txtPackageName;
-        private Label label5;
-        private Label label3;
-        private Label label2;
-        private Label label1;
-        private TextBox textBox1;
-        private Label label4;
-        private TextBox txtTotal;
-        private Label label6;
-        private ComboBox cmbClient;
-        private ComboBox cmbPackage;
-        private DateTimePicker dateTimePickerTransaction;
-        private Button btnRefresh;
-        private DataGridView dgvTransactions;
-        private Label label7;
-        private ComboBox cmbPayment;
+        private System.Windows.Forms.ComboBox cmbClient;
+        private System.Windows.Forms.ComboBox cmbPackage;
+        private System.Windows.Forms.ComboBox cmbPayment;
+        private System.Windows.Forms.TextBox txtPrice;
+        private System.Windows.Forms.DataGridView dgvTransactions;
+        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Button btnUpdate;
+        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private Label lblTitle;
     }
 }

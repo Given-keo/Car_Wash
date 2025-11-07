@@ -2,15 +2,8 @@
 {
     partial class Form1
     {
-        /// <summary>
-        ///  Required designer variable.
-        /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
-        ///  Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -22,10 +15,6 @@
 
         #region Windows Form Designer generated code
 
-        /// <summary>
-        ///  Required method for Designer support - do not modify
-        ///  the contents of this method with the code editor.
-        /// </summary>
         private void InitializeComponent()
         {
             menuStrip1 = new MenuStrip();
@@ -38,10 +27,12 @@
             mainPanel = new Panel();
             label2 = new Label();
             pictureBox1 = new PictureBox();
+            pictureBox2 = new PictureBox();
             label1 = new Label();
             menuStrip1.SuspendLayout();
             mainPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
             // 
             // menuStrip1
@@ -99,9 +90,10 @@
             // 
             // mainPanel
             // 
-            mainPanel.BackColor = SystemColors.Control;
+            mainPanel.BackColor = SystemColors.ButtonHighlight;
             mainPanel.Controls.Add(label2);
             mainPanel.Controls.Add(pictureBox1);
+            mainPanel.Controls.Add(pictureBox2);
             mainPanel.Controls.Add(label1);
             mainPanel.Dock = DockStyle.Bottom;
             mainPanel.Location = new Point(0, 36);
@@ -113,34 +105,46 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(197, 81);
+            label2.Font = new Font("Segoe UI", 8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label2.Location = new Point(423, 255);
             label2.Name = "label2";
-            label2.Size = new Size(671, 56);
-            label2.TabIndex = 2;
-            label2.Text = "Kelola pelanggan, layanan, dan transaksi Anda dengan mudah.\nJalankan bisnis cuci mobil Anda dengan lancar hanya dengan beberapa klik!";
+            label2.Size = new Size(446, 21);
+            label2.TabIndex = 5;
+            label2.Text = "Kelola Pelanggan, Layanan, dan Transaksi Anda dengan mudah.";
+            label2.Click += label2_Click;
             // 
             // pictureBox1
             // 
             pictureBox1.Image = Properties.Resources.logo_car_wash;
-            pictureBox1.Location = new Point(30, 29);
+            pictureBox1.Location = new Point(153, 129);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(150, 115);
+            pictureBox1.Size = new Size(226, 200);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox1.TabIndex = 1;
+            pictureBox1.TabIndex = 4;
             pictureBox1.TabStop = false;
-            pictureBox1.Click += pictureBox1_Click;
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.Dock = DockStyle.Bottom;
+            pictureBox2.Image = Properties.Resources.pattern;
+            pictureBox2.Location = new Point(0, 266);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(957, 377);
+            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox2.TabIndex = 3;
+            pictureBox2.TabStop = false;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Font = new Font("Impact", 48F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = SystemColors.ActiveCaptionText;
-            label1.Location = new Point(186, 29);
+            label1.Location = new Point(396, 155);
             label1.Name = "label1";
-            label1.Size = new Size(139, 38);
+            label1.Size = new Size(458, 117);
             label1.TabIndex = 0;
-            label1.Text = "Car Wash";
+            label1.Text = "CAR WASH";
+            label1.Click += label1_Click_1;
             // 
             // Form1
             // 
@@ -153,13 +157,14 @@
             MainMenuStrip = menuStrip1;
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Form1";
+            Text = "Car Wash Management";
             Load += Form1_Load;
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
             mainPanel.ResumeLayout(false);
             mainPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -174,8 +179,9 @@
         private ToolStripMenuItem laporanToolStripMenuItem;
         private Panel mainPanel;
         private Label label1;
-        private PictureBox pictureBox1;
-        private Label label2;
         private ToolStripMenuItem homeToolStripMenuItem;
+        private PictureBox pictureBox2;
+        private Label label2;
+        private PictureBox pictureBox1;
     }
 }

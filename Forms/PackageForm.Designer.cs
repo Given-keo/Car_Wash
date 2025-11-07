@@ -2,15 +2,8 @@
 {
     partial class PackageForm
     {
-        /// <summary>
-        /// Required designer variable.
-        /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
-        /// Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -22,161 +15,179 @@
 
         #region Windows Form Designer generated code
 
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
-        /// </summary>
         private void InitializeComponent()
         {
-            groupBtn = new GroupBox();
-            btnDelete = new Button();
-            btnUpdate = new Button();
-            btnAdd = new Button();
-            txtDescription = new TextBox();
-            txtPrice = new TextBox();
+            lblTitle = new Label();
+            lblName = new Label();
+            lblPrice = new Label();
+            lblDescription = new Label();
             txtName = new TextBox();
-            label5 = new Label();
-            label3 = new Label();
-            label2 = new Label();
-            label1 = new Label();
+            txtPrice = new TextBox();
+            txtDescription = new TextBox();
             dgvPackages = new DataGridView();
-            groupBtn.SuspendLayout();
+            btnAdd = new Button();
+            btnUpdate = new Button();
+            btnDelete = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvPackages).BeginInit();
             SuspendLayout();
             // 
-            // groupBtn
+            // lblTitle
             // 
-            groupBtn.BackColor = SystemColors.ActiveBorder;
-            groupBtn.Controls.Add(btnDelete);
-            groupBtn.Controls.Add(btnUpdate);
-            groupBtn.Controls.Add(btnAdd);
-            groupBtn.Location = new Point(504, 126);
-            groupBtn.Name = "groupBtn";
-            groupBtn.Size = new Size(252, 273);
-            groupBtn.TabIndex = 19;
-            groupBtn.TabStop = false;
-            groupBtn.Text = "Action";
+            lblTitle.AutoSize = true;
+            lblTitle.Font = new Font("Segoe UI", 16F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblTitle.ForeColor = Color.FromArgb(30, 60, 114);
+            lblTitle.Location = new Point(36, 33);
+            lblTitle.Margin = new Padding(4, 0, 4, 0);
+            lblTitle.Name = "lblTitle";
+            lblTitle.Size = new Size(359, 45);
+            lblTitle.TabIndex = 0;
+            lblTitle.Text = "Manajemen Paket Cuci";
             // 
-            // btnDelete
+            // lblName
             // 
-            btnDelete.BackColor = Color.Red;
-            btnDelete.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnDelete.ForeColor = SystemColors.Control;
-            btnDelete.Location = new Point(72, 195);
-            btnDelete.Name = "btnDelete";
-            btnDelete.Size = new Size(112, 34);
-            btnDelete.TabIndex = 2;
-            btnDelete.Text = "Delete";
-            btnDelete.UseVisualStyleBackColor = false;
+            lblName.AutoSize = true;
+            lblName.Font = new Font("Segoe UI", 10F);
+            lblName.Location = new Point(43, 117);
+            lblName.Margin = new Padding(4, 0, 4, 0);
+            lblName.Name = "lblName";
+            lblName.Size = new Size(125, 28);
+            lblName.TabIndex = 1;
+            lblName.Text = "Nama Paket :";
             // 
-            // btnUpdate
+            // lblPrice
             // 
-            btnUpdate.BackColor = Color.Yellow;
-            btnUpdate.Location = new Point(72, 116);
-            btnUpdate.Name = "btnUpdate";
-            btnUpdate.Size = new Size(112, 34);
-            btnUpdate.TabIndex = 1;
-            btnUpdate.Text = "Update";
-            btnUpdate.UseVisualStyleBackColor = false;
+            lblPrice.AutoSize = true;
+            lblPrice.Font = new Font("Segoe UI", 10F);
+            lblPrice.Location = new Point(43, 183);
+            lblPrice.Margin = new Padding(4, 0, 4, 0);
+            lblPrice.Name = "lblPrice";
+            lblPrice.Size = new Size(74, 28);
+            lblPrice.TabIndex = 3;
+            lblPrice.Text = "Harga :";
             // 
-            // btnAdd
+            // lblDescription
             // 
-            btnAdd.BackColor = SystemColors.ActiveCaptionText;
-            btnAdd.ForeColor = SystemColors.ButtonFace;
-            btnAdd.Location = new Point(72, 39);
-            btnAdd.Name = "btnAdd";
-            btnAdd.Size = new Size(112, 34);
-            btnAdd.TabIndex = 0;
-            btnAdd.Text = "Add";
-            btnAdd.UseVisualStyleBackColor = false;
-            // 
-            // txtDescription
-            // 
-            txtDescription.Location = new Point(182, 236);
-            txtDescription.Multiline = true;
-            txtDescription.Name = "txtDescription";
-            txtDescription.Size = new Size(299, 163);
-            txtDescription.TabIndex = 17;
-            // 
-            // txtPrice
-            // 
-            txtPrice.Location = new Point(182, 181);
-            txtPrice.Name = "txtPrice";
-            txtPrice.Size = new Size(299, 31);
-            txtPrice.TabIndex = 16;
+            lblDescription.AutoSize = true;
+            lblDescription.Font = new Font("Segoe UI", 10F);
+            lblDescription.Location = new Point(43, 250);
+            lblDescription.Margin = new Padding(4, 0, 4, 0);
+            lblDescription.Name = "lblDescription";
+            lblDescription.Size = new Size(100, 28);
+            lblDescription.TabIndex = 5;
+            lblDescription.Text = "Deskripsi :";
             // 
             // txtName
             // 
-            txtName.Location = new Point(182, 126);
+            txtName.Font = new Font("Segoe UI", 10F);
+            txtName.Location = new Point(214, 112);
+            txtName.Margin = new Padding(4, 5, 4, 5);
             txtName.Name = "txtName";
-            txtName.Size = new Size(299, 31);
-            txtName.TabIndex = 15;
+            txtName.Size = new Size(313, 34);
+            txtName.TabIndex = 2;
             // 
-            // label5
+            // txtPrice
             // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI Symbol", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label5.Location = new Point(257, 54);
-            label5.Name = "label5";
-            label5.Size = new Size(256, 32);
-            label5.TabIndex = 14;
-            label5.Text = "Data Master Package";
+            txtPrice.Font = new Font("Segoe UI", 10F);
+            txtPrice.Location = new Point(214, 178);
+            txtPrice.Margin = new Padding(4, 5, 4, 5);
+            txtPrice.Name = "txtPrice";
+            txtPrice.Size = new Size(313, 34);
+            txtPrice.TabIndex = 4;
             // 
-            // label3
+            // txtDescription
             // 
-            label3.AutoSize = true;
-            label3.Location = new Point(44, 187);
-            label3.Name = "label3";
-            label3.Size = new Size(53, 25);
-            label3.TabIndex = 12;
-            label3.Text = "Price:";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Location = new Point(44, 242);
-            label2.Name = "label2";
-            label2.Size = new Size(106, 25);
-            label2.TabIndex = 11;
-            label2.Text = "Description:";
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(44, 132);
-            label1.Name = "label1";
-            label1.Size = new Size(132, 25);
-            label1.TabIndex = 10;
-            label1.Text = "Package Name:";
+            txtDescription.Font = new Font("Segoe UI", 10F);
+            txtDescription.Location = new Point(214, 245);
+            txtDescription.Margin = new Padding(4, 5, 4, 5);
+            txtDescription.Multiline = true;
+            txtDescription.Name = "txtDescription";
+            txtDescription.Size = new Size(313, 97);
+            txtDescription.TabIndex = 6;
             // 
             // dgvPackages
             // 
+            dgvPackages.AllowUserToAddRows = false;
+            dgvPackages.AllowUserToDeleteRows = false;
             dgvPackages.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvPackages.Location = new Point(21, 416);
+            dgvPackages.Location = new Point(30, 383);
+            dgvPackages.Margin = new Padding(4, 5, 4, 5);
+            dgvPackages.MultiSelect = false;
             dgvPackages.Name = "dgvPackages";
+            dgvPackages.ReadOnly = true;
             dgvPackages.RowHeadersWidth = 62;
-            dgvPackages.Size = new Size(767, 160);
-            dgvPackages.TabIndex = 20;
+            dgvPackages.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvPackages.Size = new Size(900, 223);
+            dgvPackages.TabIndex = 10;
+            dgvPackages.CellClick += dgvPackages_CellClick;
+            // 
+            // btnAdd
+            // 
+            btnAdd.BackColor = Color.FromArgb(51, 153, 255);
+            btnAdd.FlatStyle = FlatStyle.Flat;
+            btnAdd.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            btnAdd.ForeColor = Color.White;
+            btnAdd.Location = new Point(581, 110);
+            btnAdd.Margin = new Padding(4, 3, 4, 3);
+            btnAdd.Name = "btnAdd";
+            btnAdd.Size = new Size(150, 43);
+            btnAdd.TabIndex = 12;
+            btnAdd.Text = "Tambah";
+            btnAdd.UseVisualStyleBackColor = false;
+            btnAdd.Click += btnAdd_Click;
+            // 
+            // btnUpdate
+            // 
+            btnUpdate.BackColor = Color.FromArgb(255, 204, 0);
+            btnUpdate.FlatStyle = FlatStyle.Flat;
+            btnUpdate.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            btnUpdate.ForeColor = Color.Black;
+            btnUpdate.Location = new Point(581, 174);
+            btnUpdate.Margin = new Padding(4, 3, 4, 3);
+            btnUpdate.Name = "btnUpdate";
+            btnUpdate.Size = new Size(150, 43);
+            btnUpdate.TabIndex = 13;
+            btnUpdate.Text = "Ubah";
+            btnUpdate.UseVisualStyleBackColor = false;
+            btnUpdate.Click += btnUpdate_Click_2;
+            // 
+            // btnDelete
+            // 
+            btnDelete.BackColor = Color.FromArgb(255, 77, 77);
+            btnDelete.FlatStyle = FlatStyle.Flat;
+            btnDelete.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            btnDelete.ForeColor = Color.White;
+            btnDelete.Location = new Point(581, 235);
+            btnDelete.Margin = new Padding(4, 3, 4, 3);
+            btnDelete.Name = "btnDelete";
+            btnDelete.Size = new Size(150, 43);
+            btnDelete.TabIndex = 14;
+            btnDelete.Text = "Hapus";
+            btnDelete.UseVisualStyleBackColor = false;
+            btnDelete.Click += btnDelete_Click;
             // 
             // PackageForm
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Control;
-            ClientSize = new Size(800, 590);
+            ClientSize = new Size(1074, 800);
+            Controls.Add(btnAdd);
+            Controls.Add(btnUpdate);
+            Controls.Add(btnDelete);
             Controls.Add(dgvPackages);
-            Controls.Add(groupBtn);
             Controls.Add(txtDescription);
+            Controls.Add(lblDescription);
             Controls.Add(txtPrice);
+            Controls.Add(lblPrice);
             Controls.Add(txtName);
-            Controls.Add(label5);
-            Controls.Add(label3);
-            Controls.Add(label2);
-            Controls.Add(label1);
+            Controls.Add(lblName);
+            Controls.Add(lblTitle);
+            FormBorderStyle = FormBorderStyle.FixedDialog;
+            Margin = new Padding(4, 5, 4, 5);
             Name = "PackageForm";
-            Text = "PackageForm";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Manajemen Paket Cuci";
             Load += PackageForm_Load;
-            groupBtn.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dgvPackages).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -184,17 +195,16 @@
 
         #endregion
 
-        private GroupBox groupBtn;
-        private Button btnDelete;
-        private Button btnUpdate;
+        private System.Windows.Forms.Label lblTitle;
+        private System.Windows.Forms.Label lblName;
+        private System.Windows.Forms.Label lblPrice;
+        private System.Windows.Forms.Label lblDescription;
+        private System.Windows.Forms.TextBox txtName;
+        private System.Windows.Forms.TextBox txtPrice;
+        private System.Windows.Forms.TextBox txtDescription;
+        private System.Windows.Forms.DataGridView dgvPackages;
         private Button btnAdd;
-        private TextBox txtDescription;
-        private TextBox txtPrice;
-        private TextBox txtName;
-        private Label label5;
-        private Label label3;
-        private Label label2;
-        private Label label1;
-        private DataGridView dgvPackages;
+        private Button btnUpdate;
+        private Button btnDelete;
     }
 }
